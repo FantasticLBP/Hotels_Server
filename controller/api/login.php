@@ -5,10 +5,12 @@
     require_once '../../model/pwd.php';
     require_once 'Response.php';
 
-    class Register{
+    class Login{
         private  $tableName = "user";
-        private  $telephone = "";
-        private  $password = "";
+        private  $telephone = "";           //手机号码
+        private  $password = "";            //密码
+
+
         protected static $_instance = null;
         protected function __construct(){
             //disallow new instance
@@ -23,19 +25,25 @@
             return self::$_instance;
         }
 
-        function register(){
-            self.$this->telephone = $_GET['telephone'];
+        function login(){
+            self.$this->telephone = $_GET["telephone"];
             self.$this->password = $_GET["password"];
 
             $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
-            $sql='INSERT INTO user VALUES ("","'.$this->telephone.'","","","'.$this->password.'","","","")';
+            $pdo->query("set names utf8");
+            $sql = "SELECT * FROM user WHERE telephone = '".$this->telephone."';";
             $stmt=$pdo->prepare($sql);
             $stmt->execute();
+            $row=$stmt->fetch();
+            if ($row["password"] == $this->password) {
+                Response::show(200, 'success', $row, 'json');
+            } else {
+                Response::show(201, 'fail', "登录失败", 'json');
+            }
+
         }
     }
 
-    $api = Register::getInstance();
-    $api->register();
-    Response::show(200,'success',"注册成功",'json');
-
+    $api = Login::getInstance();
+    $api->login();
 ?>

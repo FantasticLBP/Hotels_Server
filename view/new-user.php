@@ -517,7 +517,7 @@
 
                         <div class="row">
                             <div class="col-xs-12">
-                                <h3 class="header smaller lighter blue">账号申请表</h3>
+                                <h3 class="header smaller lighter blue">新用户</h3>
                                 <div class="table-header">
                                     账号申请表
                                 </div>
@@ -532,55 +532,43 @@
                                                     <span class="lbl"></span>
                                                 </label>
                                             </th>
-                                            <th class="center">用户名</th>
-                                            <th class="center">姓名</th>
-                                            <th class="hidden-480 center">密码</th>
-                                            <th class="hidden-480 center">性别</th>
-                                            <th class="center">出生日期</th>
+                                            <th class="center">昵称（手机号）</th>
+                                            <th class="center">性别</th>
+                                            <th class="hidden-480 center">生日</th>
+                                            <th class="hidden-480 center">账户余额</th>
+                                            <th class="center">密码</th>
                                             <th class="  center">操作</th>
                                         </tr>
                                         </thead>
 
                                         <tbody>
                                         <?php
-                                        $pdo=new PDO('mysql:host=localhost;dbname=db_pet','root','root');
+                                        $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
                                         $pdo->query("set names utf8");
-                                        $sql="select * from projector";
+                                        $sql="select * from user";
                                         $stmt=$pdo->prepare($sql);
                                         $stmt->execute();
                                         $allrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                         foreach($allrows as $row){
-                                            $temp=$row['usertype'];
-                                            $pwd=base64_decode($row['password']);
-                                            if($temp==1){
-                                                $usertype="课题组及实验委托方";
-                                            }else if($temp==2){
-                                                $usertype="兽医";
-
-                                            }else if($temp==3){
-                                                $usertype="工作人员";
-                                            }else{
-                                                $usertype="管理者";
-                                            }
-                                            echo '<tr>';
-                                            echo  '<td class="center">';
+											echo '<tr>';
+                                            echo '<td class="center">';
                                             echo '<label>';
                                             echo '<input type="checkbox" class="ace" />';
                                             echo '<span class="lbl"></span>';
                                             echo '</label>';
                                             echo '</td>';
 
-                                            echo '<td class="center">'.$row['username'].'</td>';
-                                            echo '<td class="hidden-480 center">'.$pwd.'</td>';
-                                            echo '<td class=" center">'.$usertype.'</td>';
-                                            echo '<td class="hidden-480 center">'.$row['mobilephone'].'</td>';
-                                            echo '<td class=" hidden-480 center">'.$row['projectername'].'</td>';
+                                            echo '<td class="center">'.$row['nickname'].'</td>';
+                                            echo '<td class="hidden-480 center">'.$row['gender'].'</td>';
+                                            echo '<td class=" center">'.$row['birthday'].'</td>';
+                                            echo '<td class="hidden-480 center">'.$row['account'].'</td>';
+                                            echo '<td class=" hidden-480 center">'.$row['password'].'</td>';
                                             echo '<td class="center">';
                                             echo '<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">';
 
 
-                                            echo '<a  class="btn btn-xs btn-info"  role="button" href="../controller/delete.php?username='.$row['username'].'&tablename=projector" onclick="javascript:return p_del()"><i class="icon-remove bigger-120">删 除</i></a>';
+                                            echo '<a  class="btn btn-xs btn-info"  role="button" href="" onclick="delete();"><i class="icon-remove bigger-120">删除</i></a>';
                                             echo '<a  class="btn btn-xs btn-info"  role="button" href="edit.php?username='.$row['username'].'&tablename=projector" ><i class="icon-edit bigger-120">编辑</i></a>';
 
                                             echo '</div>';
@@ -605,165 +593,17 @@
                                             echo '</tr>';
                                         }
                                         ?>
-
-
-                                        <?php
-                                        $pdo2=new PDO('mysql:host=localhost;dbname=db_pet','root','root');
-                                        $pdo2->query("set names utf8");
-                                        $sql2="select * from doctor";
-                                        $stmt2=$pdo2->prepare($sql2);
-                                        $stmt2->execute();
-                                        $allrows2= $stmt2->fetchAll(PDO::FETCH_ASSOC);
-
-                                        foreach($allrows2 as $row2):
-
-                                            ?>
-
-                                            <tr><td class="center">
-                                                    <label>
-                                                        <input type="checkbox" class="ace" />
-                                                        <span class="lbl"></span>
-                                                    </label>
-                                                </td>
-
-                                                <td class="center"><?php echo $row2['username']; ?></td>
-                                                <td class="hidden-480 center"><?php  echo base64_decode($row2["password"]); ?></td>
-                                                <td class=" center"><?php
-                                                    $temp=$row2['usertype'];
-                                                    if($temp==1){
-                                                        $usertype="课题组及实验委托方";
-                                                    }else if($temp==2){
-                                                        $usertype="兽医";
-
-                                                    }else if($temp==3){
-                                                        $usertype="工作人员";
-                                                    }else{
-                                                        $usertype="管理者";
-                                                    }
-                                                    echo $usertype;
-                                                    ?></td>
-                                                <td class="center hidden-480"><?php echo  $row2['mobilephone']; ?></td>
-                                                <td class="center hidden-480"><?php echo $row['projectername']; ?></td>
-                                                <td class="center">
-                                                    <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-
-                                                        <a  class="btn btn-xs btn-info"  role="button" href="../controller/delete.php?username=<?php echo $row2['username']; ?>&tablename=doctor" onclick="javascript:return p_del()"><i class="icon-remove bigger-120">删 除</i></a>
-                                                        <a  class="btn btn-xs btn-info"  role="button" href="edit.php?username=<?php echo $row2['username']; ?>&tablename=doctor" ><i class="icon-edit bigger-120">编辑</i></a>
-
-                                                    </div>
-                                                    <div class="visible-xs visible-sm hidden-md hidden-lg ">
-                                                        <div class="inline position-relative center">
-                                                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
-                                                                <i class="icon-cog icon-only bigger-110"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-                                                                <li>
-                                                                    <a  class="btn btn-xs btn-info"  role="button" href="../controller/delete.php?username=<?php echo $row2['username']; ?>&tablename=doctor" onclick="javascript:return p_del()"><i class="icon-remove bigger-120">删</i></a>
-
-                                                                </li>
-                                                                <li>
-                                                                    <a  class="btn btn-xs btn-info"  role="button" href="edit.php?username=<?php echo $row2['username']; ?>&tablename=doctor" ><i class="icon-edit bigger-120">编</i></a>
-
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <?php
-                                        endforeach;
-                                        ?>
-
-
-                                        <?php
-                                        $pdo3=new PDO('mysql:host=localhost;dbname=db_pet','root','root');
-                                        $pdo3->query("set names utf8");
-                                        $sql3="select * from worker";
-                                        $stmt3=$pdo3->prepare($sql3);
-                                        $stmt3->execute();
-                                        $allrows3= $stmt3->fetchAll(PDO::FETCH_ASSOC);
-
-                                        foreach($allrows3 as $row3):
-
-                                            ?>
-
-                                            <tr><td class="center">
-                                                    <label>
-                                                        <input type="checkbox" class="ace" />
-                                                        <span class="lbl"></span>
-                                                    </label>
-                                                </td>
-
-                                                <td class="center"><?php echo $row3['username']; ?></td>
-                                                <td class="hidden-480 center"><?php  echo base64_decode($row3["password"]); ?></td>
-                                                <td class=" center"><?php
-                                                    $temp=$row3['usertype'];
-                                                    if($temp==1){
-                                                        $usertype="课题组及实验委托方";
-                                                    }else if($temp==2){
-                                                        $usertype="兽医";
-
-                                                    }else if($temp==3){
-                                                        $usertype="工作人员";
-                                                    }else{
-                                                        $usertype="管理者";
-                                                    }
-                                                    echo $usertype;
-                                                    ?></td>
-                                                <td class="center hidden-480"><?php echo  $row3['mobilephone']; ?></td>
-                                                <td class="center hidden-480"><?php echo $row3['projectername']; ?></td>
-                                                <td class="center">
-                                                    <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-
-                                                        <a  class="btn btn-xs btn-info"  role="button" href="../controller/delete.php?username=<?php echo $row3['username']; ?>&tablename=worker" onclick="javascript:return p_del()"><i class="icon-remove bigger-120">删 除</i></a>
-                                                        <a  class="btn btn-xs btn-info"  role="button" href="edit.php?username=<?php echo $row3['username']; ?>&tablename=worker" ><i class="icon-edit bigger-120">编辑</i></a>
-
-                                                    </div>
-                                                    <div class="visible-xs visible-sm hidden-md hidden-lg ">
-                                                        <div class="inline position-relative center">
-                                                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
-                                                                <i class="icon-cog icon-only bigger-110"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-                                                                <li>
-                                                                    <a  class="btn btn-xs btn-info"  role="button" href="../controller/delete.php?username=<?php echo $row3['username']; ?>&tablename=worker" onclick="javascript:return p_del()"><i class="icon-remove bigger-120">删</i></a>
-
-                                                                </li>
-                                                                <li>
-                                                                    <a  class="btn btn-xs btn-info"  role="button" href="edit.php?username=<?php echo $row3['username']; ?>&tablename=worker" ><i class="icon-edit bigger-120">编</i></a>
-
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <?php
-                                        endforeach;
-                                        ?>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            document.getElementById("delete").onclick = function() {
-                                var request = new XMLHttpRequest();
-                                request.open("GET", "../controller/delete.php?id="+document.getElementById("order").value);
-                                request.send();
-                                request.onreadystatechange = function() {
-                                    if (request.readyState===4) {
-                                        if (request.status===200) {
-                                            document.getElementById("updateResult").innerHTML = request.responseText;
-                                        } else {
-                                            alert("发生错误：" + request.status);
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+						
+						<script type="text/javascript">
+							function delete(){
+								alert("删除");
+							}
+						</script>
                         <div id="modal-table" class="modal fade" tabindex="-1">
 
                         </div><!-- PAGE CONTENT ENDS -->

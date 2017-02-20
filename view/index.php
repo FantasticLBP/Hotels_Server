@@ -416,6 +416,12 @@
 										特色酒店
 									</a>
 								</li>
+								<li>
+									<a href="jqgrid.html">
+										<i class="icon-double-angle-right"></i>
+										特惠酒店
+									</a>
+								</li>
 							</ul>
 						</li>
 

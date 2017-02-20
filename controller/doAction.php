@@ -30,7 +30,7 @@ if(!function_exists(get_magic_quotes_gpc) || !get_magic_quotes_gpc() ) {
 //$rememberUser=='on'用户选择了记住密码
 
 
-	$table1='user';
+	$table1='admin';
 
 	//3.得到连接对象
 	$PdoMySQL=new PdoMySQL();
