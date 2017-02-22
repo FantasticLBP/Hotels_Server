@@ -9,6 +9,7 @@ class upload{
 	protected $fileInfo;
 	protected $error;
 	protected $ext;
+	protected $telephone;
 	/**
 	 * @param string $fileName
 	 * @param string $uploadPath
@@ -17,7 +18,7 @@ class upload{
 	 * @param array $allowExt
 	 * @param array $allowMime
 	 */
-	public function __construct($fileName='myFile',$uploadPath='./uploads',$imgFlag=true,$maxSize=5242880,$allowExt=array('jpeg','jpg','png','gif'),$allowMime=array('image/jpeg','image/png','image/gif')){
+	public function __construct($fileName='myFile',$uploadPath='./uploads',$imgFlag=true,$maxSize=5242880,$allowExt=array('jpeg','jpg','png','gif'),$allowMime=array('image/jpeg','image/png','image/gif'),$telephone){
 		$this->fileName=$fileName;
 		$this->maxSize=$maxSize;
 		$this->allowMime=$allowMime;
@@ -25,6 +26,7 @@ class upload{
 		$this->uploadPath=$uploadPath;
 		$this->imgFlag=$imgFlag;
 		$this->fileInfo=$_FILES[$this->fileName];
+		$this->telephone = $telephone;
 	}
 	/**
 	 * 检测上传文件是否出错
@@ -146,6 +148,11 @@ class upload{
 	protected function getUniName(){
 		return md5(uniqid(microtime(true),true));
 	}
+
+
+	protected  function getAvatorName(){
+		return "";
+	}
 	/**
 	 * 上传文件
 	 * @return string
@@ -159,14 +166,29 @@ class upload{
 				return  $this->destination;
 			}else{
 				$this->error='文件移动失败';
-//	网页上传失败			$this->showError();
+	//网页上传失败	$this->showError();
 				return "文件移动失败";
 			}
 		}else{
-//			$this->showError();
+			//$this->showError();
 			return "文件上传出错";
 		}
 	}
+
+	/**
+	 * @param $path 需要删除文件的路径
+	 * @return string
+	 */
+	public  function  deleteUploadedFile($path){
+		$result = @unlink($path);
+		if($result){
+			return "文件删除成功";
+		}else{
+			return "文件删除失败";
+		}
+	}
+
+
 }
 
 

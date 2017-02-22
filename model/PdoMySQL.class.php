@@ -323,6 +323,7 @@ class PdoMySQL{
 		if($result){
 			self::$lastInsertId=$link->lastInsertId();
 			self::$numRows=$result;
+			//self::$numRows."-".
 			return self::$numRows;
 		}else{
 			return false;
@@ -377,8 +378,8 @@ class PdoMySQL{
 	public static function search($table1,$table2,$table3){
 		$PdoMySQL=new PdoMySQL();
 		$sql1="select * from ".$table1." where status='0'";
-		$sql1="select * from ".$table2." where status='0'";
-		$sql1="select * from ".$table3." where status='0'";
+		$sql2="select * from ".$table2." where status='0'";
+		$sql3="select * from ".$table3." where status='0'";
 		$stmt1=$PdoMySQL->prepare($sql1);
 		$stmt2=$PdoMySQL->prepare($sql2);
 		$stmt3=$PdoMySQL->prepare($sql3);

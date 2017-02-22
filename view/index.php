@@ -372,13 +372,6 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="new-user.php">
-										<i class="icon-double-angle-right"></i>
-										新用户
-									</a>
-								</li>
-
-								<li>
 									<a href="user.php">
 										<i class="icon-double-angle-right"></i>
 										全部用户
@@ -390,36 +383,35 @@
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-list"></i>
-								<span class="menu-text"> 宾馆管理 </span>
+								<span class="menu-text"> 酒店管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
 
 							<ul class="submenu">
 								<li>
-									<a href="tables.html">
-										<i class="icon-double-angle-right"></i>
-										宾馆发布
-									</a>
-								</li>
-
-								<li>
-									<a href="jqgrid.html">
+									<a href="newHotel.php">
 										<i class="icon-double-angle-right"></i>
 										主题酒店发布
 									</a>
 								</li>
 
 								<li>
-									<a href="jqgrid.html">
+									<a href="specicalHotel.php">
 										<i class="icon-double-angle-right"></i>
 										特色酒店
 									</a>
 								</li>
 								<li>
-									<a href="jqgrid.html">
+									<a href="cheapHotel.php">
 										<i class="icon-double-angle-right"></i>
 										特惠酒店
+									</a>
+								</li>
+								<li>
+									<a href="hotelList.php">
+										<i class="icon-double-angle-right"></i>
+										酒店列表
 									</a>
 								</li>
 							</ul>

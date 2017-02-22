@@ -362,7 +362,7 @@
                     </a>
                 </li>
 
-                <li class="active open">
+                <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-desktop"></i>
                         <span class="menu-text"> 用户管理</span>
@@ -387,7 +387,7 @@
                     </ul>
                 </li>
 
-                <li>
+                <li class="active open">
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-list"></i>
                         <span class="menu-text"> 宾馆管理 </span>
@@ -397,23 +397,28 @@
 
                     <ul class="submenu">
                         <li>
-                            <a href="tables.html">
-                                <i class="icon-double-angle-right"></i>
-                                宾馆发布
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="jqgrid.html">
+                            <a href="newHotel.php">
                                 <i class="icon-double-angle-right"></i>
                                 主题酒店发布
                             </a>
                         </li>
 
                         <li>
-                            <a href="jqgrid.html">
+                            <a href="specicalHotel.php">
                                 <i class="icon-double-angle-right"></i>
                                 特色酒店
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cheapHotel.php">
+                                <i class="icon-double-angle-right"></i>
+                                特惠酒店
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="hotelList.php">
+                                <i class="icon-double-angle-right"></i>
+                                酒店列表
                             </a>
                         </li>
                     </ul>
@@ -501,7 +506,7 @@
                     </li>
 
                     <li class="active">
-                        <a href="account.php">用户管理</a>
+                        <a href="account.php">宾馆管理</a>
                     </li>
                 </ul><!-- .breadcrumb -->
             </div>
@@ -517,9 +522,9 @@
 
                         <div class="row">
                             <div class="col-xs-12">
-                                <h3 class="header smaller lighter blue">全部用户</h3>
+                                <h3 class="header smaller lighter blue">宾馆管理</h3>
                                 <div class="table-header">
-                                    账号申请表
+                                    酒店列表
                                 </div>
 
                                 <div class="table-responsive">
@@ -532,25 +537,24 @@
                                                     <span class="lbl"></span>
                                                 </label>
                                             </th>
-                                            <th class="center">昵称（手机号）</th>
-                                            <th class="center">性别</th>
-                                            <th class="hidden-480 center">生日</th>
-                                            <th class="hidden-480 center">账户余额</th>
-                                            <th class="center">密码</th>
+                                            <th class="center">酒店名称</th>
+                                            <th class="center">酒店地址</th>
+                                            <th class="hidden-480 center">酒店主题</th>
+                                            <th class="hidden-480 center">配套设施情况</th>
+                                            <th class="center">开业时间</th>
                                             <th class="  center">操作</th>
                                         </tr>
                                         </thead>
 
                                         <tbody>
                                         <?php
-                                        $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
-                                        $pdo->query("set names utf8");
-                                        $sql="select * from user";
-                                        $stmt=$pdo->prepare($sql);
-                                        $stmt->execute();
-                                        $allrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                                        foreach($allrows as $row){
+                                        require_once '../model/PdoMySQL.class.php';
+                                        require_once '../model/config.php';
+                                        require_once '../controller/utils/showHelper.php';
+                                        $helper = ShowHelper::getInstance();
+                                        $pdoMysql = new PdoMySQL();
+                                        $allrows = $pdoMysql->find("hotel");
+                                       foreach($allrows as $row){
                                             echo '<tr>';
                                             echo '<td class="center">';
                                             echo '<label>';
@@ -559,18 +563,14 @@
                                             echo '</label>';
                                             echo '</td>';
 
-                                            echo '<td class="center">'.$row['nickname'].'</td>';
-                                            echo '<td class="hidden-480 center">'.$row['gender'].'</td>';
-                                            echo '<td class=" center">'.$row['birthday'].'</td>';
-                                            echo '<td class="hidden-480 center">'.$row['account'].'</td>';
-                                            echo '<td class=" hidden-480 center">'.$row['password'].'</td>';
+                                            echo '<td class="center">'.$row['hotelName'].'</td>';
+                                            echo '<td class="hidden-480 center">'.$row['address'].'</td>';
+                                            echo '<td class=" center">'.$helper->getSubject($row['subject']).'</td>';
+                                            echo '<td class="hidden-480 center">'.$helper->getEquipmentCondition($row['hasWifi'],$row['hasParking'],$row['hasPackage'],$row['hasMeetingRoom']).'</td>';
+                                            echo '<td class=" hidden-480 center">'.$row['startTime'].'</td>';
                                             echo '<td class="center">';
                                             echo '<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">';
-
-
-                                            echo '<a  class="btn btn-xs btn-info"  role="button" href=""><i class="icon-remove bigger-120">删除</i></a>';
-                                            echo '<a  class="btn btn-xs btn-info"  role="button" href="" ><i class="icon-edit bigger-120">编辑</i></a>';
-
+                                            echo '<a  class="btn btn-xs btn-info"  role="button" href=""><i class="icon-remove bigger-120">操作</i></a>';
                                             echo '</div>';
                                             echo '<div class="visible-xs visible-sm hidden-md hidden-lg ">';
                                             echo '<div class="inline position-relative center">';
@@ -598,22 +598,7 @@
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            document.getElementById("delete").onclick = function() {
-                                var request = new XMLHttpRequest();
-                                request.open("GET", "../controller/delete.php?id="+document.getElementById("order").value);
-                                request.send();
-                                request.onreadystatechange = function() {
-                                    if (request.readyState===4) {
-                                        if (request.status===200) {
-                                            document.getElementById("updateResult").innerHTML = request.responseText;
-                                        } else {
-                                            alert("发生错误：" + request.status);
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+
                         <div id="modal-table" class="modal fade" tabindex="-1">
 
                         </div><!-- PAGE CONTENT ENDS -->

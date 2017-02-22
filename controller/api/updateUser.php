@@ -2,7 +2,6 @@
     error_reporting(0);
     require_once '../../model/PdoMySQL.class.php';
     require_once '../../model/config.php';
-    require_once '../../model/pwd.php';
     require_once 'Response.php';
 
     class Updater{
