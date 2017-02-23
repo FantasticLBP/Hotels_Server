@@ -521,10 +521,19 @@
 
 
                         <div class="row">
+                            <div class="col-xs-5"></div>
+                            <?php
+                                echo '<div class="col-xs-2"><a class="btn btn-danger btn-block" href="newRoom.php?';
+                                echo 'name='.$_REQUEST["name"].'&id='.$_REQUEST["id"].'&wifi='.$_REQUEST["wifi"].'&equipment='.$_REQUEST["equipment"].'">发布新房屋</a></div>';
+                            ?>
+                            <div class="col-xs-5"></div>
+
                             <div class="col-xs-12">
                                 <h3 class="header smaller lighter blue">宾馆管理</h3>
                                 <div class="table-header">
-                                    酒店列表
+                                    <?php
+                                        echo $_REQUEST["name"];
+                                    ?>
                                 </div>
 
                                 <div class="table-responsive">
@@ -537,11 +546,11 @@
                                                     <span class="lbl"></span>
                                                 </label>
                                             </th>
-                                            <th class="center">酒店名称</th>
-                                            <th class="center">酒店地址</th>
-                                            <th class="hidden-480 center">酒店主题</th>
-                                            <th class="hidden-480 center">配套设施情况</th>
-                                            <th class="center">开业时间</th>
+                                            <th class="center">房屋类型</th>
+                                            <th class="center">房屋面积</th>
+                                            <th class="hidden-480 center">配套设施等级</th>
+                                            <th class="hidden-480 center">可入住人数</th>
+                                            <th class="center">可用/总房间数量</th>
                                             <th class="center">操作</th>
                                         </tr>
                                         </thead>
@@ -550,10 +559,8 @@
                                         <?php
                                         require_once '../model/PdoMySQL.class.php';
                                         require_once '../model/config.php';
-                                        require_once '../controller/utils/showHelper.php';
-                                        $helper = ShowHelper::getInstance();
                                         $pdoMysql = new PdoMySQL();
-                                        $allrows = $pdoMysql->find("hotel");
+                                        $allrows = $pdoMysql->find("room","hotelId='{$_REQUEST["id"]}'");
                                         foreach($allrows as $row){
                                             echo '<tr>';
                                             echo '<td class="center">';
@@ -563,14 +570,14 @@
                                             echo '</label>';
                                             echo '</td>';
 
-                                            echo '<td class="center" id="hotelName">'.$row['hotelName'].'</td>';
-                                            echo '<td class="hidden-480 center">'.$row['address'].'</td>';
-                                            echo '<td class=" center">'.$helper->getSubject($row['subject']).'</td>';
-                                            echo '<td class="hidden-480 center">'.$helper->getEquipmentCondition($row['hasWifi'],$row['hasParking'],$row['hasPackage'],$row['hasMeetingRoom']).'</td>';
-                                            echo '<td class=" hidden-480 center">'.$row['startTime'].'</td>';
+                                            echo '<td class="center" id="hotelName">'.$row["type"].'</td>';
+                                            echo '<td class="hidden-480 center">'.$row["square"].'</td>';
+                                            echo '<td class=" center">'.$row["equipmentCondtion"].'</td>';
+                                            echo '<td class="hidden-480 center">'.$row["availablePerson"].'</td>';
+                                            echo '<td class=" hidden-480 center">'.$row["count"].'/'.$row["roomCount"].'</td>';
                                             echo '<td class="center">';
                                             echo '<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">';
-                                            echo '<a  class="btn btn-xs btn-info"  role="button" href="roomList.php?name='.$row['hotelName'].'&id='.$row['id'].'&wifi='.$row['hasWifi'].'&equipment='.$helper->getEquipmentCondition($row['hasWifi'],$row['hasParking'],$row['hasPackage'],$row['hasMeetingRoom']).'"><i class="icon-remove bigger-120">房间管理</i></a>';
+                                            echo '<a  class="btn btn-xs btn-info" id="'.$row["id"].'" onclick="deleteRoom(this.id);" role="button"><i class="icon-remove bigger-120">删除</i></a>';
                                             echo '</div>';
                                             echo '<div class="visible-xs visible-sm hidden-md hidden-lg ">';
                                             echo '<div class="inline position-relative center">';
@@ -592,8 +599,6 @@
                                             echo '</td>';
                                             echo '</tr>';
                                         }
-
-
                                         ?>
                                         </tbody>
                                     </table>
@@ -718,7 +723,9 @@
 <!-- inline scripts related to this page -->
 
 <script type="text/javascript">
-
+    function deleteRoom(roomId){
+        alert(roomId);
+    }
     jQuery(function($) {
         $('.easy-pie-chart.percentage').each(function(){
             var $box = $(this).closest('.infobox');

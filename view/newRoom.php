@@ -427,7 +427,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="hotelList.php">
+                            <a href="hotelList.php.php">
                                 <i class="icon-double-angle-right"></i>
                                 酒店列表
                             </a>
@@ -532,176 +532,210 @@
             <div class="page-content">
                 <div class="page-header">
                     <h1>
-                        宾馆管理
+                        <?php
+                            echo $_REQUEST["name"];
+                        ?>
                         <small>
                             <i class="icon-double-angle-right"></i>
-                            发布新酒店
+                            房屋发布
                         </small>
                     </h1>
                 </div><!-- /.page-header -->
                 <div class="row">
                     <div class="col-xs-12">
-                        <form class="form-horizontal" role="form" action="../controller/publishHotel.php" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+                        <form class="form-horizontal" role="form" action="../controller/publishRoom.php" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+
+
+                            <div class="form-group hidden" >
+                                <label class="col-sm-3 control-label no-padding-right" for="hotelId">酒店id</label>
+
+                                <div class="col-sm-9">
+                                    <?php
+                                        echo '<input type="text" id="hotelId" name="hotelId" placeholder="酒店id" class="col-xs-10 col-sm-5" value="';
+                                        echo $_REQUEST['id'];
+                                        echo '"/>';
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group hidden" >
+                                <label class="col-sm-3 control-label no-padding-right" for="hasWifi">wifi</label>
+
+                                <div class="col-sm-9">
+                                    <?php
+                                        echo '<input type="text" id="hasWifi" name="hasWifi" placeholder="wifi情况" class="col-xs-10 col-sm-5" value="';
+                                        echo $_REQUEST['wifi'];
+                                        echo '"/>';
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group hidden" >
+                                <label class="col-sm-3 control-label no-padding-right" for="equipmentCondtion">配套设施情况</label>
+
+                                <div class="col-sm-9">
+                                    <?php
+                                        echo '<input type="text" id="equipmentCondtion" name="equipmentCondtion" placeholder="配套设施情况" class="col-xs-10 col-sm-5" value="';
+                                        echo $_REQUEST['equipment'];
+                                        echo ' "/>';
+                                    ?>
+
+                                </div>
+                            </div>
 
                             <div class="form-group" >
-                                <label class="col-sm-3 control-label no-padding-right" for="hotelName">酒店名称</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="type">房屋类型</label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" id="hotelName" name="hotelName" placeholder="酒店名称" class="col-xs-10 col-sm-5"/>
+                                    <input type="text" id="type" name="type" placeholder="豪华大床房" class="col-xs-10 col-sm-5"/>
                                 </div>
                             </div>
 
-                            <div class="form-group hidden" id="hotelNameError">
+                            <div class="form-group hidden" id="typeError">
                                 <label class="col-sm-3 control-label no-padding-right"></label>
                                 <div class="col-sm-9 error"></div>
                             </div>
 
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="address">酒店地址</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="znecancelPrice">住哪儿可取消价格</label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" id="address" name="address"" placeholder="酒店地址" class="col-xs-10 col-sm-5"/>
+                                    <input type="text" id="znecancelPrice" name="znecancelPrice" placeholder="住哪儿可取消价格" class="col-xs-10 col-sm-5"/>
                                 </div>
                             </div>
-                            <div class="form-group hidden" id="hotelAddressError">
+                            <div class="form-group hidden" id="znecancelPriceError">
+                                <label class="col-sm-3 control-label no-padding-right"></label>
+                                <div class="col-sm-9 error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="znePrice">住哪儿不可取消价格</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="znePrice" name="znePrice" placeholder="住哪儿不可取消价格" class="col-xs-10 col-sm-5"/>
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="znePriceError">
+                                <label class="col-sm-3 control-label no-padding-right"></label>
+                                <div class="col-sm-9 error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="delegatecancelPrice">代理可取消价格</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="delegatecancelPrice" name="delegatecancelPrice" placeholder="代理可取消价格" class="col-xs-10 col-sm-5"/>
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="delegatecancelPriceError">
+                                <label class="col-sm-3 control-label no-padding-right"></label>
+                                <div class="col-sm-9 error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="delegatePrice">代理不可取消价格</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="delegatePrice" name="delegatePrice" placeholder="代理不可取消价格" class="col-xs-10 col-sm-5"/>
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="delegatePriceError">
                                 <label class="col-sm-3 control-label no-padding-right"></label>
                                 <div class="col-sm-9 error"></div>
                             </div>
 
 
+
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="subject">酒店主题</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="hasWindow">有无窗户</label>
 
                                 <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="subject" name="subject" data-placeholder="请选择酒店主题">
-                                        <option value="0">请选择酒店主题</option>
-                                        <option value="1">精品名宿</option>
-                                        <option value="2">茶园野趣</option>
-                                        <option value="3">景点周边</option>
-                                        <option value="4">城市周边</option>
-                                        <option value="5">公园之畔</option>
-                                        <option value="6">温泉酒店</option>
-                                        <option value="7">背包客栈</option>
-                                        <option value="8">轻奢</option>
-                                        <option value="9">新开酒店</option>
-                                        <option value="10">高端酒店</option>
-                                        <option value="11">度假酒店</option>
-                                        <option value="12">亲子酒店</option>
-                                        <option value="13">情侣酒店</option>
-                                        <option value="14">山水酒店</option>
+                                    <select class="col-xs-10 col-sm-5" id="hasWindow" name="hasWindow" data-placeholder="请选择窗户情况">
+                                        <option value="0">请选择窗户情况</option>
+                                        <option value="1">有</option>
+                                        <option value="2">无</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group hidden" id="subjectError">
-                                <label class="col-sm-3 control-label no-padding-right"></label>
-                                <div class="col-sm-9 error"></div>
-                            </div>
-
-
-                            <div class="space-4"></div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="hasWifi">无线上网</label>
-
-                                <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="hasWifi" name="hasWifi" data-placeholder="请选择无线情况">
-                                        <option value="0">请选择无线情况</option>
-                                        <option value="1">包含</option>
-                                        <option value="2">不包含</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group hidden" id="wifiError">
-                                <label class="col-sm-3 control-label no-padding-right"></label>
-                                <div class="col-sm-9 error"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="hasParking">停车场</label>
-
-                                <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="hasParking" name="hasParking" data-placeholder="请选择停车场情况">
-                                        <option value="0">请选择停车场情况</option>
-                                        <option value="1">包含</option>
-                                        <option value="2">不包含</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group hidden" id="parkingError">
-                                <label class="col-sm-3 control-label no-padding-right"></label>
-                                <div class="col-sm-9 error"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="hasPackage">行李寄存</label>
-
-                                <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="hasPackage" name="hasPackage" data-placeholder="请选择行李寄存情况">
-                                        <option value="0">请选择行李寄存情况</option>
-                                        <option value="1">包含</option>
-                                        <option value="2">不包含</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group hidden" id="packageError">
+                            <div class="form-group hidden" id="hasWindowError">
                                 <label class="col-sm-3 control-label no-padding-right"></label>
                                 <div class="col-sm-9 error"></div>
                             </div>
 
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="hasMeeting">会议室</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="floor">房屋楼层</label>
 
                                 <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="hasMeeting" name="hasMeeting" data-placeholder="请选择会议室情况">
-                                        <option value="0">请选择会议室情况</option>
-                                        <option value="1">包含</option>
-                                        <option value="2">不包含</option>
-                                    </select>
+                                    <input type="text" id="floor" name="floor" placeholder="房屋楼层" class="col-xs-10 col-sm-5"/>
                                 </div>
                             </div>
-                            <div class="form-group hidden" id="meetingError">
+                            <div class="form-group hidden" id="floorError">
                                 <label class="col-sm-3 control-label no-padding-right"></label>
                                 <div class="col-sm-9 error"></div>
                             </div>
 
-
-                            <div class="space-4"></div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="decorateTime">装修时间</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="square">房屋面积</label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" size="16" id="decorateTime" name="decorateTime" placeholder="装修时间"
-                                           class="col-xs-10 col-sm-5 form_datetime"/>
-
+                                    <input type="text" id="square" name="square" placeholder="房屋面积" class="col-xs-10 col-sm-5"/>
                                 </div>
-                                <script type="text/javascript">
-                                    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
-                                </script>
                             </div>
-                            <div class="form-group hidden" id="decorateTimeError">
+                            <div class="form-group hidden" id="squareError">
                                 <label class="col-sm-3 control-label no-padding-right"></label>
                                 <div class="col-sm-9 error"></div>
                             </div>
 
-                            <div class="space-4"></div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="startTime">开业时间</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="bedScale">床位大小</label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" size="16" id="startTime" name="startTime" placeholder="开业时间"
-                                           class="col-xs-10 col-sm-5 form_datetime"/>
-
+                                    <input type="text" id="bedScale" name="bedScale" placeholder="床位大小" class="col-xs-10 col-sm-5"/>
                                 </div>
-                                <script type="text/javascript">
-                                    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
-                                </script>
                             </div>
-                            <div class="form-group hidden" id="startTimeError">
+                            <div class="form-group hidden" id="bedScaleError">
                                 <label class="col-sm-3 control-label no-padding-right"></label>
                                 <div class="col-sm-9 error"></div>
                             </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="availablePerson">可入住人数</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="availablePerson" name="availablePerson" placeholder="可入住人数" class="col-xs-10 col-sm-5"/>
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="availablePersonError">
+                                <label class="col-sm-3 control-label no-padding-right"></label>
+                                <div class="col-sm-9 error"></div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="count">房间数目</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="count" name="count" placeholder="房间总数" class="col-xs-10 col-sm-5"/>
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="countError">
+                                <label class="col-sm-3 control-label no-padding-right"></label>
+                                <div class="col-sm-9 error"></div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="otherInfo">其他信息</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="otherInfo" name="otherInfo" placeholder="到店送果盘哦" class="col-xs-10 col-sm-5"/>
+                                </div>
+                            </div>
+
 
                             <div class="space-4"></div>
                             <div class="form-group">
@@ -884,80 +918,97 @@
 
     <!-- inline scripts related to this page -->
     <script type="text/javascript">
-        $("#hotelName").on("blur", function() {
-            if ($("#hotelName").val() === "") {
-                $("#hotelNameError").removeClass("hidden");
-                $("#hotelNameError>div").text("温馨提示：酒店名称不能为空");
+        $("#type").on("blur", function() {
+            if ($("#type").val() === "") {
+                $("#typeError").removeClass("hidden");
+                $("#typeError>div").text("温馨提示：请输入房屋类型");
             } else{
-                $("#hotelNameError").addClass("hidden");
+                $("#typeError").addClass("hidden");
             }
         });
-        $("#address").on("blur", function() {
-            if ($("#address").val() === "") {
-                $("#hotelAddressError").removeClass("hidden");
-                $("#hotelAddressError>div").text("温馨提示：酒店地址不能为空");
+        $("#znecancelPrice").on("blur", function() {
+            if ($("#znecancelPrice").val() === "") {
+                $("#znecancelPriceError").removeClass("hidden");
+                $("#znecancelPriceError>div").text("温馨提示：请输入住哪儿可取消价格");
             } else{
-                $("#hotelAddressError").addClass("hidden");
+                $("#znecancelPriceError").addClass("hidden");
             }
         });
-        $("#subject").on("blur", function() {
-            if ($("#subject").val() === "0") {
-                $("#subjectError").removeClass("hidden");
-                $("#subjectError>div").text("温馨提示：请选择酒店主题");
+        $("#znePrice").on("blur", function() {
+            if ($("#znePrice").val() === "") {
+                $("#znePriceError").removeClass("hidden");
+                $("#znePriceError>div").text("温馨提示：请输入住哪儿不可取消价格");
             } else{
-                $("#subjectError").addClass("hidden");
+                $("#znePriceError").addClass("hidden");
             }
         });
-        $("#hasWifi").on("blur", function() {
-            if ($("#hasWifi").val() === "0") {
-                $("#wifiError").removeClass("hidden");
-                $("#wifiError>div").text("温馨提示：请选择Wi-Fi情况");
+        $("#delegatecancelPrice").on("blur", function() {
+            if ($("#delegatecancelPrice").val() === "") {
+                $("#delegatecancelPriceError").removeClass("hidden");
+                $("#delegatecancelPriceError>div").text("温馨提示：请输入代理可取消价格");
             } else{
-                $("#wifiError").addClass("hidden");
+                $("#delegatecancelPriceError").addClass("hidden");
             }
         });
-        $("#hasParking").on("blur", function() {
-            if ($("#hasParking").val() === "0") {
-                $("#parkingError").removeClass("hidden");
-                $("#parkingError>div").text("温馨提示：请选择停车情况");
+        $("#delegatePrice").on("blur", function() {
+            if ($("#delegatePrice").val() === "") {
+                $("#delegatePriceError").removeClass("hidden");
+                $("#delegatePriceError>div").text("温馨提示：请输入代理不可取消价格");
             } else{
-                $("#parkingError").addClass("hidden");
+                $("#delegatePriceError").addClass("hidden");
             }
         });
-        $("#hasPackage").on("blur", function() {
-            if ($("#hasPackage").val() === "0") {
-                $("#packageError").removeClass("hidden");
-                $("#packageError>div").text("温馨提示：请选择行李寄存情况");
+        $("#hasWindow").on("blur", function() {
+            if ($("#hasWindow").val() === "0") {
+                $("#hasWindowError").removeClass("hidden");
+                $("#hasWindowError>div").text("温馨提示：请选择窗户情况");
             } else{
-                $("#packageError").addClass("hidden");
+                $("#hasWindowError").addClass("hidden");
             }
         });
-        $("#hasMeeting").on("blur", function() {
-            if ($("#hasMeeting").val() === "0") {
-                $("#meetingError").removeClass("hidden");
-                $("#meetingError>div").text("温馨提示：请选择停车情况");
+        $("#floor").on("blur", function() {
+            if ($("#floor").val() === "") {
+                $("#floorError").removeClass("hidden");
+                $("#floorError>div").text("温馨提示：请输入房屋楼层");
             } else{
-                $("#meetingError").addClass("hidden");
+                $("#floorError").addClass("hidden");
+            }
+        });
+        $("#square").on("blur", function() {
+            if ($("#square").val() === "") {
+                $("#squareError").removeClass("hidden");
+                $("#squareError>div").text("温馨提示：请输入房屋面积");
+            } else{
+                $("#squareError").addClass("hidden");
             }
         });
 
+        $("#bedScale").on("blur", function() {
+            if ($("#bedScale").val() === "") {
+                $("#bedScaleError").removeClass("hidden");
+                $("#bedScaleError>div").text("温馨提示：请输入床位大小");
+            } else{
+                $("#bedScaleError").addClass("hidden");
+            }
+        });
 
-        $("#decorateTime").on("focusout", function() {
-            if ($("#decorateTime").val() === "") {
-                $("#decorateTimeError").removeClass("hidden");
-                $("#decorateTimeError>div").text("温馨提示：请选择装修时间");
+        $("#availablePerson").on("blur", function() {
+            if ($("#availablePerson").val() === "") {
+                $("#availablePersonError").removeClass("hidden");
+                $("#availablePersonError>div").text("温馨提示：请输入该类房屋数可以入住的人数");
             } else{
-                $("#decorateTimeError").addClass("hidden");
+                $("#availablePersonError").addClass("hidden");
             }
         });
-        $("#startTime").on("focusout", function() {
-            if ($("#startTime").val() === "") {
-                $("#startTimeError").removeClass("hidden");
-                $("#startTimeError>div").text("温馨提示：请选择开业时间");
+        $("#count").on("blur", function() {
+            if ($("#count").val() === "") {
+                $("#countError").removeClass("hidden");
+                $("#countError>div").text("温馨提示：请输入该类房屋数量");
             } else{
-                $("#startTimeError").addClass("hidden");
+                $("#countError").addClass("hidden");
             }
         });
+
         function validate(){
             if($("#id-input-file-1").val() === ""){
                 $("#imageError").removeClass("hidden");
@@ -968,37 +1019,7 @@
                 return true;
             }
         }
-        $('.form_datetime').datetimepicker({
-            //language:  'fr',
-            weekStart: 1,
-            todayBtn: 1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 2,
-            forceParse: 0,
-            showMeridian: 1
-        });
-        $('.form_date').datetimepicker({
-            language: 'fr',
-            weekStart: 1,
-            todayBtn: 1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 2,
-            minView: 2,
-            forceParse: 0
-        });
-        $('.form_time').datetimepicker({
-            language: 'fr',
-            weekStart: 1,
-            todayBtn: 1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 1,
-            minView: 0,
-            maxView: 1,
-            forceParse: 0
-        });
+
     </script>
     <script type="text/javascript">
         jQuery(function ($) {
