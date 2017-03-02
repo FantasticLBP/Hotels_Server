@@ -15,7 +15,7 @@ class Response {
             return '';
         }
 
-        $type = isset($_GET['format']) ? $_GET['format'] : self::JSON;
+        //$type = isset($_GET['format']) ? $_GET['format'] : self::JSON;
 
         $result = array(
             'code' => $code,

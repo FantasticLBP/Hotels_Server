@@ -427,7 +427,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="hotelList.php.php">
+                            <a href="hotelList.php">
                                 <i class="icon-double-angle-right"></i>
                                 酒店列表
                             </a>
@@ -544,6 +544,18 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <form class="form-horizontal" role="form" action="../controller/publishRoom.php" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+
+                            <div class="form-group hidden" >
+                                <label class="col-sm-3 control-label no-padding-right" for="hotelId">酒店名称</label>
+
+                                <div class="col-sm-9">
+                                    <?php
+                                    echo '<input type="text" id="hotelName" name="hotelName" placeholder="酒店名称" class="col-xs-10 col-sm-5" value="';
+                                    echo $_REQUEST['name'];
+                                    echo '"/>';
+                                    ?>
+                                </div>
+                            </div>
 
 
                             <div class="form-group hidden" >

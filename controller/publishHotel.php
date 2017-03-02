@@ -25,7 +25,9 @@
         private  $imageId = "";
         private  $evaluationId = "";
         private  $subject = "";              //酒店主题
-
+        private  $kindDescription = "";      //酒店介绍
+        private  $kindType = 1;              //酒店类型
+        private  $stars = 3;
 
 
 
@@ -55,6 +57,10 @@
             self.$this->hasPackage = $_POST["hasPackage"];
             self.$this->subject = $_POST["subject"];
 
+            self.$this->kindType = $_POST["kindType"];
+            self.$this->kindDescription = $_POST["kindDescription"];
+            self.$this->stars = $_POST["stars"];
+
 
 
 
@@ -67,14 +73,13 @@
 
             $PdoMySQL = new PdoMySQL();
             $data = ["hotelName"=>$this->hotelName,"address"=>$this->address,"subject"=>$this->subject,"hasWifi"=>$this->hasWifi,"hasParking"=>$this->hasParking,"hasPackage"=>$this->hasPackage,"hasMeetingRoom"=>$this->hasMeetingRoom,
-            "startTime"=>$this->startTime,"decorateTime"=>$this->decorateTime,"imageId"=>"","evaluationId"=>""];
+            "startTime"=>$this->startTime,"decorateTime"=>$this->decorateTime,"evaluationId"=>"","image1"=>substr($files[0], 3),"image2"=>substr($files[1], 3),"image3"=>substr($files[2], 3),"image4"=>substr($files[3], 3),"image5"=>substr($files[4], 3),"minPrice"=>0,"kindDescription"=>$this->kindDescription,"kindType"=>$this->kindType,"stars"=>$this->stars];
 
             $hotelRes = $PdoMySQL->add($data,'hotel');
-            $lastInsertId=$PdoMySQL->getLastInsertId();
+            $lastInsertId = $PdoMySQL->getLastInsertId();
+
+
             if($hotelRes){
-                $imageData = ["id"=>$lastInsertId,"image1"=>substr($files[0], 3),"image2"=>substr($files[1], 3),"image3"=>substr($files[2], 3),"image4"=>substr($files[3], 3),"image5"=>substr($files[4], 3)];
-                $imageRes = $PdoMySQL->add($imageData,'image');
-                $lastImageId=$PdoMySQL->getLastInsertId();
                 //酒店上传成功
                 echo '<script type="text/javascript">alert("酒店发布成功");window.location.href ="../view/hotelList.php";</script>';
             }else{

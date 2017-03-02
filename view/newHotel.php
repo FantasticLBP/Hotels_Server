@@ -598,6 +598,44 @@
                                 <div class="col-sm-9 error"></div>
                             </div>
 
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="stars">酒店星级</label>
+
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" id="stars" name="stars" data-placeholder="请选择酒店星级">
+                                        <option value="0">请选择酒店星级</option>
+                                        <option value="1">1星级</option>
+                                        <option value="2">2星级</option>
+                                        <option value="3">3星级</option>
+                                        <option value="4">4星级</option>
+                                        <option value="5">5星级</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="starsError">
+                                <label class="col-sm-3 control-label no-padding-right"></label>
+                                <div class="col-sm-9 error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="kindType">酒店类型</label>
+
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" id="kindType" name="kindType" data-placeholder="请选择酒店类型">
+                                        <option value="0">请选择酒店类型</option>
+                                        <option value="1">主题酒店</option>
+                                        <option value="2">特惠酒店</option>
+                                        <option value="3">特色酒店</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="kindTypeError">
+                                <label class="col-sm-3 control-label no-padding-right"></label>
+                                <div class="col-sm-9 error"></div>
+                            </div>
+
+
+
 
                             <div class="space-4"></div>
 
@@ -662,6 +700,19 @@
                                 </div>
                             </div>
                             <div class="form-group hidden" id="meetingError">
+                                <label class="col-sm-3 control-label no-padding-right"></label>
+                                <div class="col-sm-9 error"></div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="kindDescription">主题介绍</label>
+
+                                <div class="col-sm-9">
+                                    <textarea placeholder="请输入主题介绍" name="kindDescription" id="kindDescription" class="autosize-transition form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="kindDescriptionError">
                                 <label class="col-sm-3 control-label no-padding-right"></label>
                                 <div class="col-sm-9 error"></div>
                             </div>
@@ -908,6 +959,27 @@
                 $("#subjectError").addClass("hidden");
             }
         });
+
+        $("#stars").on("blur", function() {
+            if ($("#stars").val() === "0") {
+                $("#starsError").removeClass("hidden");
+                $("#starsError>div").text("温馨提示：请选择酒店星级");
+            } else{
+                $("#starsError").addClass("hidden");
+            }
+        });
+
+
+        $("#kindType").on("blur", function() {
+            if ($("#kindType").val() === "0") {
+                $("#kindTypeError").removeClass("hidden");
+                $("#kindTypeError>div").text("温馨提示：请选择酒店类型");
+            } else{
+                $("#kindTypeError").addClass("hidden");
+            }
+        });
+
+
         $("#hasWifi").on("blur", function() {
             if ($("#hasWifi").val() === "0") {
                 $("#wifiError").removeClass("hidden");
@@ -958,6 +1030,17 @@
                 $("#startTimeError").addClass("hidden");
             }
         });
+
+        $("#kindDescription").on("focusout", function() {
+            if ($("#kindDescription").val() === "") {
+                $("#kindDescriptionError").removeClass("hidden");
+                $("#kindDescriptionError>div").text("温馨提示：请输入主题介绍");
+            } else{
+                $("#kindDescriptionError").addClass("hidden");
+            }
+        });
+
+
         function validate(){
             if($("#id-input-file-1").val() === ""){
                 $("#imageError").removeClass("hidden");

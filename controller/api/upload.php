@@ -6,8 +6,6 @@
  * Time: 上午9:15
  */
 
-error_reporting(0);
-require_once 'upload.class.php';
 require_once '../../model/PdoMySQL.class.php';
 require_once '../../model/config.php';
 require_once 'Response.php';
@@ -18,7 +16,6 @@ class UserAvator
 {
     private $tableName = "user";
     private $telephone = "";
-    private $avatorUrl = "";
     private $oldAvatorPath = "";
 
 
@@ -43,43 +40,48 @@ class UserAvator
         return self::$_instance;
     }
 
+    /**
+     *
+     */
     function  setAvator()
     {
-        self . $this->telephone = $_POST["telephone"];
-        $pdo = new PDO('mysql:host=localhost;dbname=db_Hotel', 'root', 'root');
-        $pdo->query("set names utf8");
+        self.$this->telephone = $_REQUEST["telephone"];
+        $pdoMysql = new PdoMySQL();
 
-        //先查该用户是否已经有头像，有头像先从头像文件夹中删除旧的头像，再保存新的头像，再将头像地址update数据表
-        $selectSql = "SELECT avator FROM user WHERE telephone ='" . $this->telephone . "';";
-        $oldAvatorStmt = $pdo->prepare($selectSql);
-        $oldAvatorStmt->execute();
-        $oldAvatorRow = $oldAvatorStmt->fetch();
-        if ($oldAvatorRow["avator"]) {
-            self . $this->oldAvatorPath = $oldAvatorRow["avator"];
-            //删除上传的旧文件。
-            $uploader = new upload('myAvator', '../../avator', $this->telephone);
-            $uploader->deleteUploadedFile($this->oldAvatorPath);
+        //先查该用户是否已经有头像，有头像先从头像文件夹中删除旧的头像
+        $oldAvatorRow = $pdoMysql->find($this->tableName,"telephone='$this->telephone'");
+
+
+        foreach ($oldAvatorRow as $row) {
+            if ($row["avator"]) {
+                self.$this->oldAvatorPath = $row["avator"];
+                //删除上传的旧文件。
+                $uploader = new upload('myAvator', '../../avator');
+                $uploader->deleteUploadedFile("../../".$this->oldAvatorPath);
+            }
         }
-        $upload = new upload('myAvator', '../../avator', $this->telephone);
+
+        //再保存新的头像
+        $upload = new upload('myAvator', '../../avator');
         $dest = $upload->uploadFile();
+        $dest = substr($dest,6);
 
-        if (!strstr($dest, "文件")) {
-            $updatSql = 'UPDATE user set avator ="' . $dest . '" WHERE telephone ="' . $this->telephone . '" ;';
-            $stmt = $pdo->prepare($updatSql);
-            $stmt->execute();
+        //再将头像地址update数据表
+        if (strpos($dest, "文件") === false) {
+            $pdoMysql->update(["avator"=>"$dest"],$this->tableName,"telephone='$this->telephone'");
         }
 
-        $avatorSql = 'SELECT avator FROM user WHERE telephone ="' . $this->telephone . '";';
-        $avatorStmt = $pdo->prepare($avatorSql);
-        $avatorStmt->execute();
-        $avatorRow = $avatorStmt->fetch();
-        self . $this->avatorUrl = $avatorRow[0];
-        if ($avatorRow["avator"]) {
-            Response::show(200, 'success', substr($this->avatorUrl, 5), 'json');
+        //最后将用户的基本信息返回给客户端
+        $baseInfo = $pdoMysql->find($this->tableName,"telephone='$this->telephone'");
+
+        Response::show(200, 'success',$baseInfo[0], 'json');
+        if ($baseInfo[0]["avator"]) {
+            Response::show(200, 'success',$baseInfo[0], 'json');
         } else {
             Response::show(201, 'fail', "头像上传失败", 'json');
         }
     }
+
 }
 
 $api = UserAvator::getInstance();

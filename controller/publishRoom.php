@@ -30,6 +30,10 @@ class PublishHotel{
     private $count = "";                    //房屋总数
     private $hotelId = "";                 //酒店id
 
+    private  $name = "";
+    private  $wifi = "";
+    private  $equipment = "";
+
     protected static $_instance = null;
     protected function __construct(){
         //disallow new instance
@@ -61,6 +65,9 @@ class PublishHotel{
         self.$this->otherInfo = $_POST["otherInfo"];
         self.$this->count = $_POST["count"];
         self.$this->hotelId = $_POST["hotelId"];
+        self.$this->name = $_POST["hotelName"];
+        self.$this->wifi = $_POST["hasWifi"];
+        self.$this->equipment = $_POST["equipmentCondtion"];
 
 
         foreach($_FILES as $fileInfo){
@@ -77,15 +84,22 @@ class PublishHotel{
         $hotelRes = $PdoMySQL->add($data,$this->tableName);
         $lastInsertId=$PdoMySQL->getLastInsertId();
         if($hotelRes){
+
+            //插入房间的时候将该酒店下所有房间的最低价查询出来，之后将更新酒店表，将最低价的价格进行更新
+            $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
+            $pdo->query("set names utf8");
+            $minSql = "SELECT MIN(delegatePrice) FROM room WHERE hotelId =".$this->hotelId.";";
+            $stmt = $pdo->prepare($minSql);
+            $stmt->execute();
+            $priceRow=$stmt->fetch();
+            $minPrice = $priceRow[0];
+            $PdoMySQL->update(["minPrice"=>$minPrice],"hotel","id='$this->hotelId'");
             //酒店上传成功
-            echo '<script type="text/javascript">alert("房屋发布成功");window.location.href = "../view/roomList.php?id='.$this->hotelId.'";</script>';
+            echo '<script type="text/javascript">alert("房屋发布成功");window.location.href = "../view/roomList.php?id='.$this->hotelId.'&name='.$this->name.'&wifi='.$this->wifi.'&equipment='.$this->equipment .'";</script>';
         }else{
             //酒店上传失败
             echo '<script type="text/javascript">alert("放我信息发布失败，请稍后重试！");</script>';
         }
-
-
-
     }
 }
 

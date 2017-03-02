@@ -9,7 +9,6 @@ class upload{
 	protected $fileInfo;
 	protected $error;
 	protected $ext;
-	protected $telephone;
 	/**
 	 * @param string $fileName
 	 * @param string $uploadPath
@@ -26,7 +25,6 @@ class upload{
 		$this->uploadPath=$uploadPath;
 		$this->imgFlag=$imgFlag;
 		$this->fileInfo=$_FILES[$this->fileName];
-		$this->telephone = $telephone;
 	}
 	/**
 	 * 检测上传文件是否出错

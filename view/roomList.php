@@ -390,7 +390,7 @@
                 <li class="active open">
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-list"></i>
-                        <span class="menu-text"> 宾馆管理 </span>
+                        <span class="menu-text"> 宾馆管理</span>
 
                         <b class="arrow icon-angle-down"></b>
                     </a>
@@ -577,7 +577,7 @@
                                             echo '<td class=" hidden-480 center">'.$row["count"].'/'.$row["roomCount"].'</td>';
                                             echo '<td class="center">';
                                             echo '<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">';
-                                            echo '<a  class="btn btn-xs btn-info" id="'.$row["id"].'" onclick="deleteRoom(this.id);" role="button"><i class="icon-remove bigger-120">删除</i></a>';
+                                            echo '<a  class="btn btn-xs btn-info" href="../controller/roomOperator.php?id='.$row["id"].'" role="button"><i class="icon-remove bigger-120">删除</i></a>';
                                             echo '</div>';
                                             echo '<div class="visible-xs visible-sm hidden-md hidden-lg ">';
                                             echo '<div class="inline position-relative center">';
@@ -723,9 +723,6 @@
 <!-- inline scripts related to this page -->
 
 <script type="text/javascript">
-    function deleteRoom(roomId){
-        alert(roomId);
-    }
     jQuery(function($) {
         $('.easy-pie-chart.percentage').each(function(){
             var $box = $(this).closest('.infobox');

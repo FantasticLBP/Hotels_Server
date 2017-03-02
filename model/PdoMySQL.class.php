@@ -111,7 +111,7 @@ class PdoMySQL{
 		.self::parseOrder($order)
 		.self::parseLimit($limit);
 		$dataAll=self::getAll($sql);
-//		return count($dataAll)==1?$dataAll[0]:$dataAll;
+		//		return count($dataAll)==1?$dataAll[0]:$dataAll;
 		return $dataAll;
 	}
 
@@ -127,7 +127,6 @@ class PdoMySQL{
 		$fieldsStr=join(',',$keys);
 		$values="'".join("','",array_values($data))."'";
 		$sql="INSERT {$table}({$fieldsStr}) VALUES({$values})";
-		//echo $sql;
 		return self::execute($sql);
 	} 
 
@@ -144,7 +143,6 @@ class PdoMySQL{
 		foreach($data as $key=>$val){
 			$sets.=$key."='".$val."',";
 		}
-		//echo $sets;
 		$sets=rtrim($sets,',');
 		$sql="UPDATE {$table} SET {$sets} ".self::parseWhere($where).self::parseOrder($order).self::parseLimit($limit);
 		return self::execute($sql);
