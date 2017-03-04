@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e5474c3-0035-47c8-9774-379b80efbdc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/api/WeclomeImage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/api/hotelList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/api/subject.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/roomOperator.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/avator/e2c6da526f5e013ad2fe684d03f87848.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/controller/User_operate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/controller/api/tets.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avator/4df7e59ac13f89aa3a8951a662ad108d.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db_pet.sql" afterPath="$PROJECT_DIR$/db_Hotel.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/api/Response.php" afterPath="$PROJECT_DIR$/controller/api/Response.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/api/upload.php" afterPath="$PROJECT_DIR$/controller/api/upload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/fileHandler/upload.class.php" afterPath="$PROJECT_DIR$/controller/fileHandler/upload.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/publishHotel.php" afterPath="$PROJECT_DIR$/controller/publishHotel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/publishRoom.php" afterPath="$PROJECT_DIR$/controller/publishRoom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/api/hotelList.php" afterPath="$PROJECT_DIR$/controller/api/hotelList.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/PdoMySQL.class.php" afterPath="$PROJECT_DIR$/model/PdoMySQL.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/cheapHotel.php" afterPath="$PROJECT_DIR$/view/cheapHotel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/index.php" afterPath="$PROJECT_DIR$/view/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/newHotel.php" afterPath="$PROJECT_DIR$/view/newHotel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/newRoom.php" afterPath="$PROJECT_DIR$/view/newRoom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/roomList.php" afterPath="$PROJECT_DIR$/view/roomList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/specicalHotel.php" afterPath="$PROJECT_DIR$/view/specicalHotel.php" />
     </list>
     <ignored path="Hotels_Server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,25 +39,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PdoMySQL.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/PdoMySQL.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.375">
-              <caret line="112" column="36" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
-              <folding>
-                <marker date="1488386524000" expanded="true" signature="2420:2449" placeholder="SELECT %s FR..." />
-                <marker date="1488386524000" expanded="true" signature="4002:4030" placeholder="UPDATE ${{$t..." />
-                <marker date="1488386524000" expanded="true" signature="4392:4413" placeholder="DELETE FROM ..." />
-                <marker date="1488386524000" expanded="true" signature="9219:9298" placeholder="..." />
-                <marker date="1488386524000" expanded="true" signature="9299:9324" placeholder="..." />
-                <marker date="1488386524000" expanded="true" signature="9508:9550" placeholder="select * fro..${$table1}..." />
-                <marker date="1488386524000" expanded="true" signature="9562:9604" placeholder="select * fro..${$table2}..." />
-                <marker date="1488386524000" expanded="true" signature="9616:9658" placeholder="select * fro..${$table3}..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="publishHotel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/publishHotel.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,11 +49,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hotelList.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hotelList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/api/hotelList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5581738">
-              <caret line="71" column="54" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hotelList.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/hotelList.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="483" column="21" selection-start-line="472" selection-start-column="15" selection-end-line="483" selection-end-column="21" />
+              <folding>
+                <marker date="1488646314000" expanded="true" signature="27749:27859" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -90,11 +85,69 @@
         <entry file="file://$PROJECT_DIR$/view/newHotel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="975" column="58" selection-start-line="975" selection-start-column="58" selection-end-line="975" selection-end-column="58" />
+              <caret line="711" column="59" selection-start-line="711" selection-start-column="59" selection-end-line="711" selection-end-column="67" />
               <folding>
-                <marker date="1488385504000" expanded="true" signature="38838:38961" placeholder="..." />
-                <marker date="1488385504000" expanded="true" signature="49202:49234" placeholder="..." />
+                <marker date="1488644291000" expanded="true" signature="38846:38969" placeholder="..." />
+                <marker date="1488644291000" expanded="true" signature="49210:49242" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="399" column="52" selection-start-line="399" selection-start-column="52" selection-end-line="399" selection-end-column="52" />
+              <folding>
+                <marker date="1488643321000" expanded="true" signature="53365:53472" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cheapHotel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/cheapHotel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="422" column="42" selection-start-line="422" selection-start-column="42" selection-end-line="422" selection-end-column="42" />
+              <folding>
+                <marker date="1488649200000" expanded="true" signature="38847:38970" placeholder="..." />
+                <marker date="1488649200000" expanded="true" signature="49211:49243" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="specicalHotel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/specicalHotel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.25">
+              <caret line="418" column="27" selection-start-line="418" selection-start-column="27" selection-end-line="418" selection-end-column="27" />
+              <folding>
+                <marker date="1488649188000" expanded="true" signature="38847:38970" placeholder="..." />
+                <marker date="1488649188000" expanded="true" signature="49211:49243" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_Hotel.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db_Hotel.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25345623">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Response.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/api/Response.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,26 +182,28 @@
         <option value="$PROJECT_DIR$/view/assets/js/jquery-2.0.3.min.js" />
         <option value="$PROJECT_DIR$/view/assets/css/style.css" />
         <option value="$PROJECT_DIR$/controller/fileHandler/upload.func.php" />
-        <option value="$PROJECT_DIR$/view/specicalHotel.php" />
-        <option value="$PROJECT_DIR$/view/index.php" />
         <option value="$PROJECT_DIR$/controller/utils/showHelper.php" />
         <option value="$PROJECT_DIR$/view/test.html" />
-        <option value="$PROJECT_DIR$/view/hotelList.php" />
         <option value="$PROJECT_DIR$/js/jquery-1.11.1.js" />
         <option value="$PROJECT_DIR$/controller/roomOperator.php" />
         <option value="$PROJECT_DIR$/view/roomList.php" />
         <option value="$PROJECT_DIR$/view/newRoom.php" />
-        <option value="$PROJECT_DIR$/controller/api/subject.php" />
         <option value="$PROJECT_DIR$/controller/api/Response.php" />
         <option value="$PROJECT_DIR$/controller/api/WeclomeImage.php" />
         <option value="$PROJECT_DIR$/controller/fileHandler/upload.class.php" />
-        <option value="$PROJECT_DIR$/controller/api/hotelList.php" />
         <option value="$PROJECT_DIR$/controller/api/test.php" />
         <option value="$PROJECT_DIR$/controller/publishRoom.php" />
         <option value="$PROJECT_DIR$/controller/api/upload.php" />
-        <option value="$PROJECT_DIR$/view/newHotel.php" />
         <option value="$PROJECT_DIR$/controller/publishHotel.php" />
+        <option value="$PROJECT_DIR$/controller/api/subject.php" />
+        <option value="$PROJECT_DIR$/view/index.php" />
+        <option value="$PROJECT_DIR$/view/newHotel.php" />
+        <option value="$PROJECT_DIR$/view/hotelList.php" />
+        <option value="$PROJECT_DIR$/controller/api/hotelList.php" />
         <option value="$PROJECT_DIR$/model/PdoMySQL.class.php" />
+        <option value="$PROJECT_DIR$/view/specicalHotel.php" />
+        <option value="$PROJECT_DIR$/view/cheapHotel.php" />
+        <option value="$PROJECT_DIR$/db_Hotel.sql" />
       </list>
     </option>
   </component>
@@ -162,7 +217,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="27" />
     <option name="width" value="1440" />
     <option name="height" value="823" />
   </component>
@@ -191,6 +246,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -209,92 +265,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fileHandler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotels_Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../document downloadAndUpload/upload" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Tech/Web前端/Info" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -376,15 +353,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="823" extended-state="6" />
+    <frame x="0" y="27" width="1440" height="823" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23319027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24248926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25679544" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -437,13 +414,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/assets/css/daterangepicker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/assets/css/bootstrap-datetimepicker.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -500,23 +470,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/doAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/fetchpwd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="10.625">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/getcook.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -584,31 +540,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/cheapHotel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/specicalHotel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/utils/showHelper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.413793">
           <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="416" column="33" selection-start-line="390" selection-start-column="28" selection-end-line="416" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -661,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/hotelList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02209131">
-          <caret line="593" column="41" selection-start-line="593" selection-start-column="41" selection-end-line="593" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/roomList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02209131">
@@ -675,18 +603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02209131">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.75">
           <caret line="311" column="15" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -719,21 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.9411764">
           <caret line="10" column="40" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/api/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/api/subject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1764706">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -772,20 +677,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller/getcook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/doAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22091311">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/api/subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/newHotel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="711" column="59" selection-start-line="711" selection-start-column="59" selection-end-line="711" selection-end-column="67" />
+          <folding>
+            <marker date="1488644291000" expanded="true" signature="38846:38969" placeholder="..." />
+            <marker date="1488644291000" expanded="true" signature="49210:49242" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/hotelList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="483" column="21" selection-start-line="472" selection-start-column="15" selection-end-line="483" selection-end-column="21" />
+          <folding>
+            <marker date="1488646314000" expanded="true" signature="27749:27859" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/api/hotelList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/PdoMySQL.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.375">
-          <caret line="112" column="36" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
-          <folding>
-            <marker date="1488386524000" expanded="true" signature="2420:2449" placeholder="SELECT %s FR..." />
-            <marker date="1488386524000" expanded="true" signature="4002:4030" placeholder="UPDATE ${{$t..." />
-            <marker date="1488386524000" expanded="true" signature="4392:4413" placeholder="DELETE FROM ..." />
-            <marker date="1488386524000" expanded="true" signature="9219:9298" placeholder="..." />
-            <marker date="1488386524000" expanded="true" signature="9299:9324" placeholder="..." />
-            <marker date="1488386524000" expanded="true" signature="9508:9550" placeholder="select * fro..${$table1}..." />
-            <marker date="1488386524000" expanded="true" signature="9562:9604" placeholder="select * fro..${$table2}..." />
-            <marker date="1488386524000" expanded="true" signature="9616:9658" placeholder="select * fro..${$table3}..." />
-          </folding>
+        <state vertical-scroll-proportion="0.4708589">
+          <caret line="114" column="18" selection-start-line="114" selection-start-column="18" selection-end-line="114" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -797,21 +750,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/newHotel.php">
+    <entry file="file://$PROJECT_DIR$/view/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="975" column="58" selection-start-line="975" selection-start-column="58" selection-end-line="975" selection-end-column="58" />
+          <caret line="399" column="52" selection-start-line="399" selection-start-column="52" selection-end-line="399" selection-end-column="52" />
           <folding>
-            <marker date="1488385504000" expanded="true" signature="38838:38961" placeholder="..." />
-            <marker date="1488385504000" expanded="true" signature="49202:49234" placeholder="..." />
+            <marker date="1488643321000" expanded="true" signature="53365:53472" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/api/hotelList.php">
+    <entry file="file://$PROJECT_DIR$/view/cheapHotel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5581738">
-          <caret line="71" column="54" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="422" column="42" selection-start-line="422" selection-start-column="42" selection-end-line="422" selection-end-column="42" />
+          <folding>
+            <marker date="1488649200000" expanded="true" signature="38847:38970" placeholder="..." />
+            <marker date="1488649200000" expanded="true" signature="49211:49243" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/specicalHotel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.25">
+          <caret line="418" column="27" selection-start-line="418" selection-start-column="27" selection-end-line="418" selection-end-column="27" />
+          <folding>
+            <marker date="1488649188000" expanded="true" signature="38847:38970" placeholder="..." />
+            <marker date="1488649188000" expanded="true" signature="49211:49243" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/api/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_Hotel.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25345623">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

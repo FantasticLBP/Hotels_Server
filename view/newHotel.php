@@ -706,10 +706,10 @@
 
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="kindDescription">主题介绍</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="kindDescription">特色介绍</label>
 
                                 <div class="col-sm-9">
-                                    <textarea placeholder="请输入主题介绍" name="kindDescription" id="kindDescription" class="autosize-transition form-control"></textarea>
+                                    <textarea placeholder="如果是特色酒店，请输入特色介绍" name="kindDescription" id="kindDescription" class="autosize-transition form-control"></textarea>
                                 </div>
                             </div>
                             <div class="form-group hidden" id="kindDescriptionError">
@@ -1034,7 +1034,7 @@
         $("#kindDescription").on("focusout", function() {
             if ($("#kindDescription").val() === "") {
                 $("#kindDescriptionError").removeClass("hidden");
-                $("#kindDescriptionError>div").text("温馨提示：请输入主题介绍");
+                $("#kindDescriptionError>div").text("温馨提示：请输入特色介绍");
             } else{
                 $("#kindDescriptionError").addClass("hidden");
             }

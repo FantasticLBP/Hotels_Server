@@ -390,7 +390,7 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="newHotel.php">
+									<a href="newHotel.php?tag=1">
 										<i class="icon-double-angle-right"></i>
 										主题酒店发布
 									</a>
