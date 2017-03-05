@@ -541,7 +541,7 @@
                                             <th class="center">酒店地址</th>
                                             <th class="hidden-480 center">酒店主题</th>
                                             <th class="hidden-480 center">配套设施情况</th>
-                                            <th class="center">开业时间</th>
+                                            <th class="center">酒店星级</th>
                                             <th class="center">操作</th>
                                         </tr>
                                         </thead>
@@ -567,7 +567,7 @@
                                             echo '<td class="hidden-480 center">'.$row['address'].'</td>';
                                             echo '<td class=" center">'.$helper->getSubject($row['subject']).'</td>';
                                             echo '<td class="hidden-480 center">'.$helper->getEquipmentCondition($row['hasWifi'],$row['hasParking'],$row['hasPackage'],$row['hasMeetingRoom']).'</td>';
-                                            echo '<td class=" hidden-480 center">'.$row['startTime'].'</td>';
+                                            echo '<td class=" hidden-480 center">'.$row['stars'].'</td>';
                                             echo '<td class="center">';
                                             echo '<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">';
                                             echo '<a  class="btn btn-xs btn-info"  role="button" href="roomList.php?name='.$row['hotelName'].'&id='.$row['id'].'&wifi='.$row['hasWifi'].'&equipment='.$helper->getEquipmentCondition($row['hasWifi'],$row['hasParking'],$row['hasPackage'],$row['hasMeetingRoom']).'"><i class="icon-remove bigger-120">房间管理</i></a>';

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Mar 04, 2017 at 07:39 PM
+-- Generation Time: Mar 05, 2017 at 04:14 PM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -79,7 +79,7 @@ CREATE TABLE `hotel` (
   `kindDescription` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '酒店特色介绍',
   `kindType` int(1) NOT NULL DEFAULT '1' COMMENT '酒店类型：1、主题酒店；2、特色酒店；3、特惠酒店',
   `stars` int(1) NOT NULL DEFAULT '3' COMMENT '几星级'
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `hotel`
@@ -99,8 +99,9 @@ INSERT INTO `hotel` (`id`, `hotelName`, `subject`, `address`, `hasWifi`, `hasPar
 (11, '北京远见桃花海度假别墅 ', 14, '北京市平谷区金海湖镇祖务村祖务西路1号(近京东大溶洞南1公里)', 1, 1, 1, 2, '2016-11-30 00:05', '2015-07-08 08:25', '', 'postedImage/0fd48841aaa47aa42c311bc67ca21249.jpg', 'postedImage/9dfff46582cec85297d063cc4013e880.jpg', 'postedImage/7d7bf44805b5461495b6f5597d5e6711.jpg', 'postedImage/db230513caf17ec12238103c07824717.jpg', 'postedImage/2feb18648fec5234fe818d9a82def2d1.jpg', 0, '坐标：平谷，精致的欧式独栋别墅，包含五室一厅，适合家庭、好友聚会。拥有私家庭影院、阳光露台、自助、烧烤选择丰富，附带娱乐设施。', 3, 4),
 (12, '上海中福大酒店 ', 11, '上海市 黄浦区九江路619号(浙江中路路口 近南京路步行街 地铁一号线14号口)', 1, 1, 1, 1, '2017-03-01 02:05', '2016-11-29 01:05', '', 'postedImage/39ce5bea0649b2d5f192785d14638928.jpg', 'postedImage/863f94c00eecb6bc3caefe2824c2dcde.jpg', 'postedImage/a0937d9bd88cba1e924927cfdd61cc93.jpg', 'postedImage/b74b32b04cd8e395633bb524c134a913.jpg', 'postedImage/0a37e3ec03a676b82492e2edf18946e3.jpg', 0, '', 1, 4),
 (13, '上海衡山路十二号豪华精选酒店 ', 8, '上海衡山路12号', 1, 1, 1, 1, '2013-01-01 09:00', '2012-12-12 09:00', '', 'postedImage/d8abed9deccec6c42b1fbc418555960a.jpg', 'postedImage/7658fffafdd63741e1526a8fb3f8d372.jpg', 'postedImage/10323faed1cdc5847e4980ccc344046d.jpg', 'postedImage/1be5197ebbcda7f85177a46e1bf60e3b.jpg', 'postedImage/98da2d61f1b7c546d1b6d4cd28cc5fa3.jpg', 0, 'L形的户外露台是云尚西餐厅的亮点所在，简约的设计和木质架构让人看着很舒服，欣赏着周遭唯美海派 楼宇景致和伤害天际线，怎一个惬意了得。', 3, 4),
-(14, '广州圣丰索菲特大酒店', 11, '[广州东站/天河北/天平架]天河区广州大道中988号(近火车东站,天河体育中心,时代广场)', 1, 1, 1, 1, '2010-02-02 09:00', '2010-01-01 12:10', '', 'postedImage/7657d7de043de806f6d961baefe1d965.jpg', 'postedImage/1aa39255e7f62ec62e66f11312e1d002.jpg', 'postedImage/7d9d34f534d1875ed59f95ace9fb6bc7.jpg', 'postedImage/6cc96dab8eb907556aab1e7e315017d4.jpg', 'postedImage/8958a62012d5b4ba6dc449fe37e4edbe.jpg', 0, '酒店坐落在广州天河区中心地带，交通便利，购物、就餐、游览均一站式满足。独特的法国艺术气息在酒店洋溢，Spa水疗中心、24小时健康身体中心及室内全景游泳池，带来极致奢侈。', 3, 0),
-(15, '千岛湖洲际度假酒店 ', 12, '杭州淳安县千岛湖镇羡山半岛', 1, 1, 1, 1, '2009-01-01 12:00', '2008-12-04 12:22', '', 'postedImage/08ff82ccff9ab865114a2a6cb97c31e3.jpg', 'postedImage/d918850851c55f4bf84c86d22012365f.jpg', 'postedImage/04317e202d3e6060c9fa7523e36956da.jpg', 'postedImage/62c1cf37892afc45385dc6c3e1a552bc.jpg', 'postedImage/1b42c8225a67a6a8d3e516bfddf6bf20.jpg', 0, '酒店位于羡山半岛深处，早上拉开窗帘就看到青山碧水，身心愉悦。在这里可以体验农家采摘、植树、羡山半岛游、山地卡丁车，小孩家长各得其乐。', 3, 5);
+(14, '广州圣丰索菲特大酒店', 11, '[广州东站/天河北/天平架]天河区广州大道中988号(近火车东站,天河体育中心,时代广场)', 1, 1, 1, 1, '2010-02-02 09:00', '2010-01-01 12:10', '', 'postedImage/7657d7de043de806f6d961baefe1d965.jpg', 'postedImage/1aa39255e7f62ec62e66f11312e1d002.jpg', 'postedImage/7d9d34f534d1875ed59f95ace9fb6bc7.jpg', 'postedImage/6cc96dab8eb907556aab1e7e315017d4.jpg', 'postedImage/8958a62012d5b4ba6dc449fe37e4edbe.jpg', 0, '酒店坐落在广州天河区中心地带，交通便利，购物、就餐、游览均一站式满足。独特的法国艺术气息在酒店洋溢，Spa水疗中心、24小时健康身体中心及室内全景游泳池，带来极致奢侈。', 3, 4),
+(15, '千岛湖洲际度假酒店 ', 12, '杭州淳安县千岛湖镇羡山半岛', 1, 1, 1, 1, '2009-01-01 12:00', '2008-12-04 12:22', '', 'postedImage/08ff82ccff9ab865114a2a6cb97c31e3.jpg', 'postedImage/d918850851c55f4bf84c86d22012365f.jpg', 'postedImage/04317e202d3e6060c9fa7523e36956da.jpg', 'postedImage/62c1cf37892afc45385dc6c3e1a552bc.jpg', 'postedImage/1b42c8225a67a6a8d3e516bfddf6bf20.jpg', 0, '酒店位于羡山半岛深处，早上拉开窗帘就看到青山碧水，身心愉悦。在这里可以体验农家采摘、植树、羡山半岛游、山地卡丁车，小孩家长各得其乐。', 3, 5),
+(16, '天使恋人情侣酒店(万象城店)', 13, '深圳罗湖区宝安南路嘉宾花园四楼(近万象城城市天地,大剧院地铁站F出口)', 1, 1, 1, 1, '2007-01-12 09:00', '2006-12-12 09:00', '', 'postedImage/e969c2bad2c8005d48f8db3ae0fbea28.jpg', 'postedImage/f95a500685ad9507042ef84312e9e95c.jpg', 'postedImage/aac4ec3ee296caa379126d9fd27169ea.jpg', 'postedImage/7cb4f6e0a61af888179f7695d5b867f1.jpg', 'postedImage/9d997770bd5eeab77b1a2cb2edfcfb2e.jpg', 0, '酒店以制造浪漫为使命，有着风情万种的烂漫温馨。海洋主题斑斓而梦幻，田园主题清新而狂野，些在激情大片中才会出现的场景，在天使恋人就可尽情享有。', 3, 4);
 
 -- --------------------------------------------------------
 
@@ -295,7 +296,7 @@ ALTER TABLE `evaluation`
 -- AUTO_INCREMENT for table `hotel`
 --
 ALTER TABLE `hotel`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '酒店id',AUTO_INCREMENT=16;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '酒店id',AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `orderList`
 --
