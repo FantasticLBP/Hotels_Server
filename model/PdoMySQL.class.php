@@ -127,7 +127,7 @@ class PdoMySQL{
 		array_walk($keys,array('PdoMySQL','addSpecialChar'));
 		$fieldsStr=join(',',$keys);
 		$values="'".join("','",array_values($data))."'";
-		$sql="INSERT {$table}({$fieldsStr}) VALUES({$values})";
+		$sql="INSERT INTO `{$table}`({$fieldsStr}) VALUES({$values})";
 		return self::execute($sql);
 	} 
 
