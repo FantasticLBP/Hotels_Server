@@ -102,7 +102,7 @@
 									<span class="red">酒店预定</span>
 									<span class="white">系统</span>
 								</h1>
-								<h4 class="blue">&copy;<a href="https://git.oschina.net/xinian.com/AnimalMangement" >胡德全</a></h4>
+								<h4 class="blue">&copy;<a href="" >胡德全</a></h4>
 							</div>
 
 							<div class="space-6"></div>
@@ -171,14 +171,14 @@
 
 											<div class="space-6"></div>
 											<p>
-												输入你的邮箱来接收密码
+												输入你的登录账号
 											</p>
 
 											<form action="../controller/doAction.php?act=seek" autocomplete="true" method="post">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-					<input type="email" onKeyUp="showHint(this.value)"  name="email" id="email" class="form-control" placeholder="输入注册邮箱"  required="required" />
+					<input type="text" onKeyUp="showHint(this.value)"  name="username" id="username" class="form-control" placeholder="输入登录账号"  required="required" />
 															<i class="icon-envelope"></i>
 														</span>
 													</label>

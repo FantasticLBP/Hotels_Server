@@ -104,7 +104,7 @@ class PdoMySQL{
 	 * @return Ambigous <unknown, unknown, multitype:>
 	 */
 	public static function find($tables,$where=null,$fields='*',$group=null,$having=null,$order=null,$limit=null){
-		$sql='SELECT '.self::parseFields($fields).' FROM '.$tables
+		$sql='SELECT '.self::parseFields($fields).' FROM '.'`'.$tables.'`'
 		.self::parseWhere($where)
 		.self::parseGroup($group)
 		.self::parseHaving($having)
