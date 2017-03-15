@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>宾馆预订系统</title>
-    <meta name="keywords" content="宾馆预订系统" />
+    <title>住哪儿管理系统</title>
+    <meta name="keywords" content="住哪儿管理系统" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- basic styles -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -52,7 +52,7 @@
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    宾馆预订系统
+                    住哪儿管理系统
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->

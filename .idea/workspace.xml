@@ -2,47 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e5474c3-0035-47c8-9774-379b80efbdc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/orders.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/unEvaluatedOrder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/unVisitedOrder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/unpayedOrder.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/blank.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/dropzone.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/elements.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/error-404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/error-500.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/faq.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/form-elements.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/form-wizard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/gallery.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/grid.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/inbox.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/invoice.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/jqgrid.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/jquery-ui.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/nestable-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/pricing.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/tables.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/timeline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/treeview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/widgets.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/wysiwyg.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/api/Order.php" afterPath="$PROJECT_DIR$/controller/api/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/utils/showHelper.php" afterPath="$PROJECT_DIR$/controller/utils/showHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_Hotel.sql" afterPath="$PROJECT_DIR$/db_Hotel.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/PdoMySQL.class.php" afterPath="$PROJECT_DIR$/model/PdoMySQL.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/cheapHotel.php" afterPath="$PROJECT_DIR$/view/cheapHotel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/hotelList.php" afterPath="$PROJECT_DIR$/view/hotelList.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/index.php" afterPath="$PROJECT_DIR$/view/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/login.php" afterPath="$PROJECT_DIR$/view/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/newHotel.php" afterPath="$PROJECT_DIR$/view/newHotel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/newRoom.php" afterPath="$PROJECT_DIR$/view/newRoom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/orders.php" afterPath="$PROJECT_DIR$/view/orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/roomList.php" afterPath="$PROJECT_DIR$/view/roomList.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/specicalHotel.php" afterPath="$PROJECT_DIR$/view/specicalHotel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/unEvaluatedOrder.php" afterPath="$PROJECT_DIR$/view/unEvaluatedOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/unVisitedOrder.php" afterPath="$PROJECT_DIR$/view/unVisitedOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/unpayedOrder.php" afterPath="$PROJECT_DIR$/view/unpayedOrder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/user.php" afterPath="$PROJECT_DIR$/view/user.php" />
     </list>
     <ignored path="Hotels_Server.iws" />
@@ -72,125 +43,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="unVisitedOrder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/unVisitedOrder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.274509">
-              <caret line="443" column="43" selection-start-line="443" selection-start-column="43" selection-end-line="443" selection-end-column="43" />
-              <folding>
-                <marker date="1489585042000" expanded="true" signature="26590:26703" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unEvaluatedOrder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/unEvaluatedOrder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8039215">
-              <caret line="450" column="41" selection-start-line="356" selection-start-column="12" selection-end-line="459" selection-end-column="36" />
-              <folding>
-                <marker date="1489585065000" expanded="true" signature="26591:26704" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orders.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/orders.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5963303">
-              <caret line="489" column="0" selection-start-line="489" selection-start-column="0" selection-end-line="489" selection-end-column="0" />
-              <folding>
-                <marker date="1489585088000" expanded="true" signature="26579:26692" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0392156">
-              <caret line="459" column="44" selection-start-line="356" selection-start-column="20" selection-end-line="459" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.31039757">
+              <caret line="520" column="45" selection-start-line="520" selection-start-column="45" selection-end-line="520" selection-end-column="45" />
               <folding>
-                <marker date="1489584662000" expanded="true" signature="52878:52985" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.45098">
-              <caret line="458" column="21" selection-start-line="458" selection-start-column="21" selection-end-line="458" selection-end-column="21" />
-              <folding>
-                <marker date="1489584717000" expanded="true" signature="19844:19862" placeholder="select * fro..user..." />
-                <marker date="1489584717000" expanded="true" signature="27646:27756" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newHotel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/newHotel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.27451">
-              <caret line="477" column="36" selection-start-line="374" selection-start-column="12" selection-end-line="477" selection-end-column="36" />
-              <folding>
-                <marker date="1489584808000" expanded="true" signature="38189:38312" placeholder="..." />
-                <marker date="1489584808000" expanded="true" signature="48553:48585" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="specicalHotel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/specicalHotel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.568627">
-              <caret line="374" column="12" selection-start-line="374" selection-start-column="12" selection-end-line="477" selection-end-column="36" />
-              <folding>
-                <marker date="1489584862000" expanded="true" signature="38190:38313" placeholder="..." />
-                <marker date="1489584862000" expanded="true" signature="48554:48586" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cheapHotel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/cheapHotel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.392157">
-              <caret line="374" column="12" selection-start-line="374" selection-start-column="12" selection-end-line="477" selection-end-column="36" />
-              <folding>
-                <marker date="1489584903000" expanded="true" signature="38191:38314" placeholder="..." />
-                <marker date="1489584903000" expanded="true" signature="48555:48587" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotelList.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/hotelList.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.490196">
-              <caret line="356" column="12" selection-start-line="356" selection-start-column="12" selection-end-line="459" selection-end-column="36" />
-              <folding>
-                <marker date="1489584949000" expanded="true" signature="26872:26985" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unpayedOrder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/unpayedOrder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0392156">
-              <caret line="436" column="43" selection-start-line="436" selection-start-column="43" selection-end-line="436" selection-end-column="43" />
-              <folding>
-                <marker date="1489585008000" expanded="true" signature="26589:26702" placeholder="..." />
+                <marker date="1489586437000" expanded="true" signature="23518:23625" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -250,7 +109,6 @@
         <option value="$PROJECT_DIR$/controller/api/Order.php" />
         <option value="$PROJECT_DIR$/view/login.php" />
         <option value="$PROJECT_DIR$/controller/utils/showHelper.php" />
-        <option value="$PROJECT_DIR$/view/index.php" />
         <option value="$PROJECT_DIR$/view/user.php" />
         <option value="$PROJECT_DIR$/view/newHotel.php" />
         <option value="$PROJECT_DIR$/view/specicalHotel.php" />
@@ -260,6 +118,7 @@
         <option value="$PROJECT_DIR$/view/unVisitedOrder.php" />
         <option value="$PROJECT_DIR$/view/unEvaluatedOrder.php" />
         <option value="$PROJECT_DIR$/view/orders.php" />
+        <option value="$PROJECT_DIR$/view/index.php" />
       </list>
     </option>
   </component>
@@ -426,7 +285,7 @@
     <frame x="0" y="24" width="1440" height="823" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23891273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23891273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -777,74 +636,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.45098">
+        <state vertical-scroll-proportion="0.81498474">
           <caret line="458" column="21" selection-start-line="458" selection-start-column="21" selection-end-line="458" selection-end-column="21" />
           <folding>
-            <marker date="1489584717000" expanded="true" signature="19844:19862" placeholder="select * fro..user..." />
-            <marker date="1489584717000" expanded="true" signature="27646:27756" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0392156">
-          <caret line="459" column="44" selection-start-line="356" selection-start-column="20" selection-end-line="459" selection-end-column="44" />
-          <folding>
-            <marker date="1489584662000" expanded="true" signature="52878:52985" placeholder="..." />
+            <marker date="1489586267000" expanded="true" signature="19847:19865" placeholder="select * fro..user..." />
+            <marker date="1489586267000" expanded="true" signature="27649:27759" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/newHotel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.27451">
+        <state vertical-scroll-proportion="0.33333334">
           <caret line="477" column="36" selection-start-line="374" selection-start-column="12" selection-end-line="477" selection-end-column="36" />
           <folding>
-            <marker date="1489584808000" expanded="true" signature="38189:38312" placeholder="..." />
-            <marker date="1489584808000" expanded="true" signature="48553:48585" placeholder="..." />
+            <marker date="1489586263000" expanded="true" signature="38183:38306" placeholder="..." />
+            <marker date="1489586263000" expanded="true" signature="48547:48579" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/specicalHotel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.568627">
+        <state vertical-scroll-proportion="0.7461774">
           <caret line="374" column="12" selection-start-line="374" selection-start-column="12" selection-end-line="477" selection-end-column="36" />
           <folding>
-            <marker date="1489584862000" expanded="true" signature="38190:38313" placeholder="..." />
-            <marker date="1489584862000" expanded="true" signature="48554:48586" placeholder="..." />
+            <marker date="1489586263000" expanded="true" signature="38184:38307" placeholder="..." />
+            <marker date="1489586263000" expanded="true" signature="48548:48580" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/cheapHotel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.392157">
+        <state vertical-scroll-proportion="0.65443426">
           <caret line="374" column="12" selection-start-line="374" selection-start-column="12" selection-end-line="477" selection-end-column="36" />
           <folding>
-            <marker date="1489584903000" expanded="true" signature="38191:38314" placeholder="..." />
-            <marker date="1489584903000" expanded="true" signature="48555:48587" placeholder="..." />
+            <marker date="1489586263000" expanded="true" signature="38185:38308" placeholder="..." />
+            <marker date="1489586263000" expanded="true" signature="48549:48581" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/hotelList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.490196">
+        <state vertical-scroll-proportion="-0.19418961">
           <caret line="356" column="12" selection-start-line="356" selection-start-column="12" selection-end-line="459" selection-end-column="36" />
           <folding>
-            <marker date="1489584949000" expanded="true" signature="26872:26985" placeholder="..." />
+            <marker date="1489586266000" expanded="true" signature="26875:26988" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/unpayedOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0392156">
+        <state vertical-scroll-proportion="0.470948">
           <caret line="436" column="43" selection-start-line="436" selection-start-column="43" selection-end-line="436" selection-end-column="43" />
           <folding>
-            <marker date="1489585008000" expanded="true" signature="26589:26702" placeholder="..." />
+            <marker date="1489586267000" expanded="true" signature="26592:26705" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -854,7 +703,7 @@
         <state vertical-scroll-proportion="-9.274509">
           <caret line="443" column="43" selection-start-line="443" selection-start-column="43" selection-end-line="443" selection-end-column="43" />
           <folding>
-            <marker date="1489585042000" expanded="true" signature="26590:26703" placeholder="..." />
+            <marker date="1489586267000" expanded="true" signature="26593:26706" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -864,7 +713,7 @@
         <state vertical-scroll-proportion="-2.8039215">
           <caret line="450" column="41" selection-start-line="356" selection-start-column="12" selection-end-line="459" selection-end-column="36" />
           <folding>
-            <marker date="1489585065000" expanded="true" signature="26591:26704" placeholder="..." />
+            <marker date="1489586267000" expanded="true" signature="26594:26707" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -874,7 +723,17 @@
         <state vertical-scroll-proportion="0.5963303">
           <caret line="489" column="0" selection-start-line="489" selection-start-column="0" selection-end-line="489" selection-end-column="0" />
           <folding>
-            <marker date="1489585088000" expanded="true" signature="26579:26692" placeholder="..." />
+            <marker date="1489586267000" expanded="true" signature="26582:26695" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31039757">
+          <caret line="520" column="45" selection-start-line="520" selection-start-column="45" selection-end-line="520" selection-end-column="45" />
+          <folding>
+            <marker date="1489586437000" expanded="true" signature="23518:23625" placeholder="..." />
           </folding>
         </state>
       </provider>
