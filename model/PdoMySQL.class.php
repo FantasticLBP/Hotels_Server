@@ -157,7 +157,7 @@ class PdoMySQL{
 	 * @return Ambigous <boolean, unknown, number>
 	 */
 	public static function delete($table,$where=null,$order=null,$limit=0){
-		$sql="DELETE FROM {$table} ".self::parseWhere($where).self::parseOrder($order).self::parseLimit($limit);
+		$sql="DELETE FROM `{$table}` ".self::parseWhere($where).self::parseOrder($order).self::parseLimit($limit);
 		return self::execute($sql);
 	}
 	/**

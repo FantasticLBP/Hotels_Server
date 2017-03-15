@@ -91,10 +91,20 @@ class Order
         if($userRows[0]["telephone"] != $this->telephone){
             Response::show(201,"fail","非安全的数据请求","json");
         }
-        $data = ['id'=>null,"hotelId"=>$this->hotelId,"merberId"=>$this->memberId,"linkman"=>$this->linkman,"telephone"=>$this->telephone,"totalPrice"=>$this->totalPrice,"status"=>0,"roomId"=>$this->roomId,"startTime"=>$this->startTime,"endTime"=>$this->endTime,"orderId"=>$this->orderId,"livingPeriod"=>$this->livingPeriod];
-        $hotelRes = $mysqlPdo->add($data,'order');
-        $lastInsertId = $mysqlPdo->getLastInsertId();
 
+
+
+        $roomCountRows = $mysqlPdo->find('room',"hotelId='$this->hotelId'");
+        $roomCounts = $roomCountRows[0]["count"];
+
+        if($roomCounts>=1){
+            $res = $mysqlPdo->update(["count"=>$roomCounts-1],"room","hotelId='$this->hotelId'");
+            $data = ['id'=>null,"hotelId"=>$this->hotelId,"merberId"=>$this->memberId,"linkman"=>$this->linkman,"telephone"=>$this->telephone,"totalPrice"=>$this->totalPrice,"status"=>0,"roomId"=>$this->roomId,"startTime"=>$this->startTime,"endTime"=>$this->endTime,"orderId"=>$this->orderId,"livingPeriod"=>$this->livingPeriod];
+            $hotelRes = $mysqlPdo->add($data,'order');
+            $lastInsertId = $mysqlPdo->getLastInsertId();
+        }else{
+            $res = $mysqlPdo->update(["count"=>0],"room","hotelId='$this->hotelId'");
+        }
 
         if($hotelRes){
             //酒店下单成功

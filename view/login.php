@@ -189,14 +189,20 @@
 														</span>
 													</label>
 
-													<div class="clearfix">
-                                 <button id="seekPassword" class="width-35 pull-right btn btn-sm btn-danger">提交</button>
-													</div>
 												</fieldset>
 											</form>
 
                                             <!--一段ajax来检测该邮箱是否被注册-->
 										</div><!-- /widget-main -->
+										<div class="toolbar clearfix">
+											<div>
+												<a href="#" onclick="show_box('login-box'); return false;" class="forgot-password-link">
+													<i class="icon-arrow-left"></i>
+													登录
+												</a>
+											</div>
+										</div>
+									</div><!-- /widget-body -->
 									</div><!-- /widget-body -->
 								</div><!-- /signup-box -->
 							</div><!-- /position-relative -->

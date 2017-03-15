@@ -371,12 +371,7 @@
                     </a>
 
                     <ul class="submenu">
-                        <li>
-                            <a href="new-user.php">
-                                <i class="icon-double-angle-right"></i>
-                                新用户
-                            </a>
-                        </li>
+
 
                         <li class="active">
                             <a href="user.php">
@@ -390,30 +385,35 @@
                 <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-list"></i>
-                        <span class="menu-text"> 宾馆管理 </span>
+                        <span class="menu-text"> 酒店管理 </span>
 
                         <b class="arrow icon-angle-down"></b>
                     </a>
 
                     <ul class="submenu">
                         <li>
-                            <a href="tables.html">
-                                <i class="icon-double-angle-right"></i>
-                                宾馆发布
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="jqgrid.html">
+                            <a href="newHotel.php?tag=1">
                                 <i class="icon-double-angle-right"></i>
                                 主题酒店发布
                             </a>
                         </li>
 
                         <li>
-                            <a href="jqgrid.html">
+                            <a href="specicalHotel.php">
                                 <i class="icon-double-angle-right"></i>
                                 特色酒店
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cheapHotel.php">
+                                <i class="icon-double-angle-right"></i>
+                                特惠酒店
+                            </a>
+                        </li>
+                        <li>
+                            <a href="hotelList.php">
+                                <i class="icon-double-angle-right"></i>
+                                酒店列表
                             </a>
                         </li>
                     </ul>
@@ -429,28 +429,28 @@
 
                     <ul class="submenu">
                         <li>
-                            <a href="form-elements.html">
+                            <a href="unpayedOrder.php">
                                 <i class="icon-double-angle-right"></i>
                                 待付款
                             </a>
                         </li>
 
                         <li>
-                            <a href="form-wizard.html">
+                            <a href="unVisitedOrder.php">
                                 <i class="icon-double-angle-right"></i>
                                 未出行
                             </a>
                         </li>
 
                         <li>
-                            <a href="wysiwyg.html">
+                            <a href="unEvaluatedOrder.php">
                                 <i class="icon-double-angle-right"></i>
                                 待评价
                             </a>
                         </li>
 
                         <li>
-                            <a href="dropzone.html">
+                            <a href="orders.php">
                                 <i class="icon-double-angle-right"></i>
                                 历史记录
                             </a>
@@ -458,25 +458,7 @@
                     </ul>
                 </li>
 
-                <li>
-                    <a href="widgets.html">
-                        <i class="icon-list-alt"></i>
-                        <span class="menu-text"> 订单管理 </span>
-                    </a>
-                </li>
 
-                <li>
-                    <a href="calendar.html">
-                        <i class="icon-calendar"></i>
-
-								<span class="menu-text">
-									日历
-									<span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
-										<i class="icon-warning-sign red bigger-130"></i>
-									</span>
-								</span>
-                    </a>
-                </li>
             </ul><!-- /.nav-list -->
 
             <div class="sidebar-collapse" id="sidebar-collapse">

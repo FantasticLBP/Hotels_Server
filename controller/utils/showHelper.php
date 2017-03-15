@@ -97,6 +97,26 @@ class ShowHelper
 
 
     }
+    public  function  getOrderStatus($status){
+        $statuCode = intval($status);
+        $statuString = "";
+        switch($statuCode){
+            case 0:
+                $statuString = "待付款";
+                break;
+            case 1:
+                $statuString = "未出行";
+                break;
+            case 2:
+                $statuString = "待评价";
+                break;
+            case 3:
+                $statuString = "完成";
+                break;
+
+        }
+        return $statuString;
+    }
 
     public function  getEquipmentCondition($hasWifi, $hasParking, $hasPackage, $hasMeetingRoom)
     {

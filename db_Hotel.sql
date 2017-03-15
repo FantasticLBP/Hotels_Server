@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Mar 05, 2017 at 04:14 PM
+-- Generation Time: Mar 15, 2017 at 07:46 AM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -79,7 +79,7 @@ CREATE TABLE `hotel` (
   `kindDescription` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '酒店特色介绍',
   `kindType` int(1) NOT NULL DEFAULT '1' COMMENT '酒店类型：1、主题酒店；2、特色酒店；3、特惠酒店',
   `stars` int(1) NOT NULL DEFAULT '3' COMMENT '几星级'
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `hotel`
@@ -96,12 +96,47 @@ INSERT INTO `hotel` (`id`, `hotelName`, `subject`, `address`, `hasWifi`, `hasPar
 (8, '杭州西溪悦椿度假酒店 ', 3, '杭州 西湖区 紫金港路西溪天堂国际旅游综合体8号 ，近天目山路。', 1, 1, 1, 1, '2016-11-29 02:25', '2017-01-05 10:30', '', 'postedImage/02c3cabce2f2fa5d66232c04bf458f61.jpg', 'postedImage/53637a5047caae7c02e536dc0abf175f.jpg', 'postedImage/95d61d84790f8bb499ffa80311dcdcfb.jpg', 'postedImage/b719e6f2898f03dbe246c11039e984af.jpg', 'postedImage/59365c3abfebbf03d8ddecec8583112f.jpg', 450, '', 1, 5),
 (9, '上海同文君亭酒店 ', 4, '上海 虹口区 四川北路1755号 ，近海伦西路。', 1, 1, 2, 2, '2016-08-03 08:25', '2015-06-01 01:00', '', 'postedImage/f5dade5a55ad0dfba6f899d67490e13b.jpg', 'postedImage/20ab48ab4d5c45917b5839fe4de53274.jpg', 'postedImage/46d154ca9599fb76b2f8677e232eb483.jpg', 'postedImage/a868488ff1c38cfea0bdf38920166830.jpg', 'postedImage/6dd13d10adcace84e14c32ebede9602f.jpg', 500, '', 1, 5),
 (10, '北京金霖酒店 ', 11, '北京 东城区 珠市口东大街18号 ，近前门大街、地铁7号线珠市口C出口、刘根大舞台、天坛北门', 1, 2, 1, 1, '2017-02-25 15:21', '2015-09-01 01:05', '', 'postedImage/645c85da1d26ecc04d5cf9dd028e4cf2.jpg', 'postedImage/bcd1e9c483b7bdeedc2ef3166dd8164f.jpg', 'postedImage/5eb14823e56dcdc8f07a168180943bbc.jpg', 'postedImage/990ce46d3327d8dcfed3ee770569eca3.jpg', 'postedImage/f06e16d806413841d4fc5e02ad798c2d.jpg', 0, '', 1, 5),
-(11, '北京远见桃花海度假别墅 ', 14, '北京市平谷区金海湖镇祖务村祖务西路1号(近京东大溶洞南1公里)', 1, 1, 1, 2, '2016-11-30 00:05', '2015-07-08 08:25', '', 'postedImage/0fd48841aaa47aa42c311bc67ca21249.jpg', 'postedImage/9dfff46582cec85297d063cc4013e880.jpg', 'postedImage/7d7bf44805b5461495b6f5597d5e6711.jpg', 'postedImage/db230513caf17ec12238103c07824717.jpg', 'postedImage/2feb18648fec5234fe818d9a82def2d1.jpg', 0, '坐标：平谷，精致的欧式独栋别墅，包含五室一厅，适合家庭、好友聚会。拥有私家庭影院、阳光露台、自助、烧烤选择丰富，附带娱乐设施。', 3, 4),
+(11, '北京远见桃花海度假别墅 ', 14, '北京市平谷区金海湖镇祖务村祖务西路1号(近京东大溶洞南1公里)', 0, 0, 1, 2, '2016-11-30 00:05', '2015-07-08 08:25', '', 'postedImage/0fd48841aaa47aa42c311bc67ca21249.jpg', 'postedImage/9dfff46582cec85297d063cc4013e880.jpg', 'postedImage/7d7bf44805b5461495b6f5597d5e6711.jpg', 'postedImage/db230513caf17ec12238103c07824717.jpg', 'postedImage/2feb18648fec5234fe818d9a82def2d1.jpg', 0, '坐标：平谷，精致的欧式独栋别墅，包含五室一厅，适合家庭、好友聚会。拥有私家庭影院、阳光露台、自助、烧烤选择丰富，附带娱乐设施。', 3, 4),
 (12, '上海中福大酒店 ', 11, '上海市 黄浦区九江路619号(浙江中路路口 近南京路步行街 地铁一号线14号口)', 1, 1, 1, 1, '2017-03-01 02:05', '2016-11-29 01:05', '', 'postedImage/39ce5bea0649b2d5f192785d14638928.jpg', 'postedImage/863f94c00eecb6bc3caefe2824c2dcde.jpg', 'postedImage/a0937d9bd88cba1e924927cfdd61cc93.jpg', 'postedImage/b74b32b04cd8e395633bb524c134a913.jpg', 'postedImage/0a37e3ec03a676b82492e2edf18946e3.jpg', 0, '', 1, 4),
 (13, '上海衡山路十二号豪华精选酒店 ', 8, '上海衡山路12号', 1, 1, 1, 1, '2013-01-01 09:00', '2012-12-12 09:00', '', 'postedImage/d8abed9deccec6c42b1fbc418555960a.jpg', 'postedImage/7658fffafdd63741e1526a8fb3f8d372.jpg', 'postedImage/10323faed1cdc5847e4980ccc344046d.jpg', 'postedImage/1be5197ebbcda7f85177a46e1bf60e3b.jpg', 'postedImage/98da2d61f1b7c546d1b6d4cd28cc5fa3.jpg', 0, 'L形的户外露台是云尚西餐厅的亮点所在，简约的设计和木质架构让人看着很舒服，欣赏着周遭唯美海派 楼宇景致和伤害天际线，怎一个惬意了得。', 3, 4),
 (14, '广州圣丰索菲特大酒店', 11, '[广州东站/天河北/天平架]天河区广州大道中988号(近火车东站,天河体育中心,时代广场)', 1, 1, 1, 1, '2010-02-02 09:00', '2010-01-01 12:10', '', 'postedImage/7657d7de043de806f6d961baefe1d965.jpg', 'postedImage/1aa39255e7f62ec62e66f11312e1d002.jpg', 'postedImage/7d9d34f534d1875ed59f95ace9fb6bc7.jpg', 'postedImage/6cc96dab8eb907556aab1e7e315017d4.jpg', 'postedImage/8958a62012d5b4ba6dc449fe37e4edbe.jpg', 0, '酒店坐落在广州天河区中心地带，交通便利，购物、就餐、游览均一站式满足。独特的法国艺术气息在酒店洋溢，Spa水疗中心、24小时健康身体中心及室内全景游泳池，带来极致奢侈。', 3, 4),
 (15, '千岛湖洲际度假酒店 ', 12, '杭州淳安县千岛湖镇羡山半岛', 1, 1, 1, 1, '2009-01-01 12:00', '2008-12-04 12:22', '', 'postedImage/08ff82ccff9ab865114a2a6cb97c31e3.jpg', 'postedImage/d918850851c55f4bf84c86d22012365f.jpg', 'postedImage/04317e202d3e6060c9fa7523e36956da.jpg', 'postedImage/62c1cf37892afc45385dc6c3e1a552bc.jpg', 'postedImage/1b42c8225a67a6a8d3e516bfddf6bf20.jpg', 0, '酒店位于羡山半岛深处，早上拉开窗帘就看到青山碧水，身心愉悦。在这里可以体验农家采摘、植树、羡山半岛游、山地卡丁车，小孩家长各得其乐。', 3, 5),
-(16, '天使恋人情侣酒店(万象城店)', 13, '深圳罗湖区宝安南路嘉宾花园四楼(近万象城城市天地,大剧院地铁站F出口)', 1, 1, 1, 1, '2007-01-12 09:00', '2006-12-12 09:00', '', 'postedImage/e969c2bad2c8005d48f8db3ae0fbea28.jpg', 'postedImage/f95a500685ad9507042ef84312e9e95c.jpg', 'postedImage/aac4ec3ee296caa379126d9fd27169ea.jpg', 'postedImage/7cb4f6e0a61af888179f7695d5b867f1.jpg', 'postedImage/9d997770bd5eeab77b1a2cb2edfcfb2e.jpg', 0, '酒店以制造浪漫为使命，有着风情万种的烂漫温馨。海洋主题斑斓而梦幻，田园主题清新而狂野，些在激情大片中才会出现的场景，在天使恋人就可尽情享有。', 3, 4);
+(16, '天使恋人情侣酒店(万象城店)', 13, '深圳罗湖区宝安南路嘉宾花园四楼(近万象城城市天地,大剧院地铁站F出口)', 1, 1, 1, 1, '2007-01-12 09:00', '2006-12-12 09:00', '', 'postedImage/e969c2bad2c8005d48f8db3ae0fbea28.jpg', 'postedImage/f95a500685ad9507042ef84312e9e95c.jpg', 'postedImage/aac4ec3ee296caa379126d9fd27169ea.jpg', 'postedImage/7cb4f6e0a61af888179f7695d5b867f1.jpg', 'postedImage/9d997770bd5eeab77b1a2cb2edfcfb2e.jpg', 970, '酒店以制造浪漫为使命，有着风情万种的烂漫温馨。海洋主题斑斓而梦幻，田园主题清新而狂野，些在激情大片中才会出现的场景，在天使恋人就可尽情享有。', 3, 4),
+(17, '杭州新延安饭店 ', 9, '杭州下城区延安路直戒坛寺巷20号(地铁凤起路B出口,向前直行约500米,市中心武林银泰对面)', 1, 1, 1, 1, '2008-01-10 12:00', '2008-01-01 12:00', '', 'postedImage/11f09abeb56854af8fefa4051d3b8269.jpg', 'postedImage/32094f614d02aac0cdb6618cf9afcce8.jpg', 'postedImage/37290ff97bc9590580677868773279d2.jpg', 'postedImage/4a7ea1e4735fba950fd6fd3d0e62caa4.jpg', 'postedImage/8c8801ecc0edf97e324bb1f3593a254b.jpg', 0, '', 1, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order`
+--
+
+CREATE TABLE `order` (
+  `id` int(10) NOT NULL COMMENT 'id',
+  `hotelId` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '酒店id',
+  `merberId` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '会员id',
+  `linkman` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '联系人',
+  `telephone` varchar(11) NOT NULL COMMENT '联系电话',
+  `totalPrice` int(100) NOT NULL COMMENT '总金额',
+  `status` int(1) NOT NULL DEFAULT '0' COMMENT '默认订单状态：0，待付款：1，未出行：2，待评价：3',
+  `roomId` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '房间id',
+  `startTime` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '入住时间',
+  `endTime` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '离开时间',
+  `orderId` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '订单id',
+  `livingPeriod` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '1' COMMENT '住宿日期'
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `order`
+--
+
+INSERT INTO `order` (`id`, `hotelId`, `merberId`, `linkman`, `telephone`, `totalPrice`, `status`, `roomId`, `startTime`, `endTime`, `orderId`, `livingPeriod`) VALUES
+(1, '1', '22', '陈独秀', '15757118111', 647, 1, '1', '03-11', '03-16', 'G311258607986547', '5'),
+(2, '1', '22', '陈独秀', '15757118111', 750, 1, '2', '03-11', '03-16', 'G311486018625494', '5'),
+(3, '2', '22', '陈独秀', '15757118111', 1725, 2, '4', '03-12', '03-16', 'G311523493549341', '4'),
+(4, '3', '22', '陈独秀', '15757118111', 385, 1, '5', '03-12', '03-16', 'G311536200436636', '4'),
+(5, '5', '22', '陈独秀', '15757118111', 58888, 3, '8', '03-12', '03-24', 'G311541010208540', '12'),
+(6, '7', '22', '陈独秀', '15757118111', 1268, 1, '10', '03-12', '03-22', 'G311543120932576', '10'),
+(7, '8', '22', '陈独秀', '15757118111', 480, 0, '11', '03-12', '03-14', 'G311544085366043', '2');
 
 -- --------------------------------------------------------
 
@@ -150,7 +185,7 @@ CREATE TABLE `room` (
   `image3` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '房屋附图3',
   `image4` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '房屋附图4',
   `image5` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '房屋附图5'
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `room`
@@ -170,8 +205,9 @@ INSERT INTO `room` (`id`, `hotelId`, `type`, `znecancelPrice`, `znePrice`, `dele
 (11, 8, '特价房 ', 498, 480, 480, 450, 1, 1, '优秀 ', '1', 120, '3米宽', 2, 6, '无', 6, 'postedImage/8d23294fe90f424c0a09ea9a75f27371.jpg', 'postedImage/8d50f607fba1647f81276dca9fde2058.jpg', '', '', ''),
 (12, 9, '君亭概念房 ', 829, 828, 850, 840, 1, 1, '良好 ', '2', 120, '3米宽', 2, 8, '无', 8, 'postedImage/9ba9230bf9e2e88916535f8d3be0f509.jpg', 'postedImage/eb3551b26e064c39f988b003de8b6457.jpg', '', '', ''),
 (13, 9, '君亭套房', 1145, 1130, 1145, 1120, 1, 1, '良好 ', '3、4、8层', 45, '双人床2米', 2, 6, '无', 6, 'postedImage/08c340f4258e06d6e47ff9fa01208d53.jpg', '', '', '', ''),
-(14, 11, '君亭套房47', 1145, 1130, 1145, 1120, 1, 1, '良好 ', '3、4、8层', 45, '双人床2米', 2, 6, '无', 6, 'postedImage/e05894491f053d22ada95436428585b6.jpg', '', '', '', ''),
-(15, 9, '豪华大床房 ', 523, 520, 520, 500, 0, 1, '良好 ', '2-10层', 25, '双人床1.8米', 2, 28, '不可加床', 28, 'postedImage/16abae03fe993b38ae34e5993b55430a.jpg', 'postedImage/07c50e1499c13f740ba02f2a229ecce6.jpg', 'postedImage/1ba1b8545ce7353f909a19a4d8a1f8fb.jpg', '', '');
+(14, 11, '君亭套房', 1145, 1130, 1145, 1120, 1, 0, '良好 ', '3、4、8层', 45, '双人床2米', 2, 6, '红木高级大床房', 6, 'postedImage/e05894491f053d22ada95436428585b6.jpg', '', '', '', ''),
+(15, 9, '豪华大床房 ', 523, 520, 520, 500, 0, 1, '良好 ', '2-10层', 25, '双人床1.8米', 2, 28, '不可加床', 28, 'postedImage/16abae03fe993b38ae34e5993b55430a.jpg', 'postedImage/07c50e1499c13f740ba02f2a229ecce6.jpg', 'postedImage/1ba1b8545ce7353f909a19a4d8a1f8fb.jpg', '', ''),
+(16, 16, '天宫系列房', 999, 980, 980, 970, 1, 1, '全优 ', '8', 50, '3米宽', 2, 28, '到店送餐券', 28, 'postedImage/ef1635aa98be875051b9726ace819d7a.jpg', 'postedImage/baee4ad8dba7f45e7de1e5642b97ab7b.jpg', 'postedImage/8edfd78bb845d2c2b24da7546257e770.jpg', 'postedImage/00ef157b95893b566d474eda842783ba.jpg', 'postedImage/ad6b6001a0b357cb3113b313456906cc.jpg');
 
 -- --------------------------------------------------------
 
@@ -221,7 +257,7 @@ CREATE TABLE `user` (
   `avator` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '头像',
   `account` int(20) NOT NULL DEFAULT '0' COMMENT '账户余额',
   `nickname` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '昵称'
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
@@ -229,8 +265,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `telephone`, `gender`, `birthday`, `password`, `avator`, `account`, `nickname`) VALUES
 (1, '15757118174', '男', '1995-02-20', '123456', '', 0, '大忙人'),
-(22, '15757118111', '男', '2017-2-19', '666666', 'avator/199bfdb6fc37ebbbefafb3f69a3bd409.jpg', 0, '独立开发者'),
-(23, '15757118113', '', '', 'lbp321', '', 0, '');
+(22, '15757118111', '男', '2017-2-19', '666666', 'avator/98d0f7a5c04310b674a4e4a636dac621.jpg', 0, '陈独秀'),
+(23, '15757118113', '', '', 'lbp321', '', 0, ''),
+(24, '15757118112', '', '', '123456', '', 0, '');
 
 --
 -- Indexes for dumped tables
@@ -252,6 +289,12 @@ ALTER TABLE `evaluation`
 -- Indexes for table `hotel`
 --
 ALTER TABLE `hotel`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order`
+--
+ALTER TABLE `order`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -296,7 +339,12 @@ ALTER TABLE `evaluation`
 -- AUTO_INCREMENT for table `hotel`
 --
 ALTER TABLE `hotel`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '酒店id',AUTO_INCREMENT=17;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '酒店id',AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT for table `order`
+--
+ALTER TABLE `order`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `orderList`
 --
@@ -306,7 +354,7 @@ ALTER TABLE `orderList`
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `subject`
 --
@@ -316,4 +364,4 @@ ALTER TABLE `subject`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=24;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=25;

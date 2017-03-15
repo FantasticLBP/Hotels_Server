@@ -380,7 +380,7 @@
                     </ul>
                 </li>
 
-                <li class="active open">
+                <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-list"></i>
                         <span class="menu-text"> 酒店管理 </span>
@@ -408,7 +408,7 @@
                                 特惠酒店
                             </a>
                         </li>
-                        <li class="active">
+                        <li >
                             <a href="hotelList.php">
                                 <i class="icon-double-angle-right"></i>
                                 酒店列表
@@ -417,7 +417,7 @@
                     </ul>
                 </li>
 
-                <li>
+                <li class="active open">
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-edit"></i>
                         <span class="menu-text"> 订单管理 </span>
@@ -426,7 +426,7 @@
                     </a>
 
                     <ul class="submenu">
-                        <li>
+                        <li class="active">
                             <a href="unpayedOrder.php">
                                 <i class="icon-double-angle-right"></i>
                                 待付款
@@ -481,7 +481,7 @@
                     </li>
 
                     <li class="active">
-                        <a href="account.php">宾馆管理</a>
+                        <a href="account.php">订单管理</a>
                     </li>
                 </ul><!-- .breadcrumb -->
             </div>
@@ -497,9 +497,9 @@
 
                         <div class="row">
                             <div class="col-xs-12">
-                                <h3 class="header smaller lighter blue">宾馆管理</h3>
+                                <h3 class="header smaller lighter blue">订单管理</h3>
                                 <div class="table-header">
-                                    酒店列表
+                                    全部订单
                                 </div>
 
                                 <div class="table-responsive">
@@ -512,11 +512,11 @@
                                                     <span class="lbl"></span>
                                                 </label>
                                             </th>
-                                            <th class="center">酒店名称</th>
-                                            <th class="center">酒店地址</th>
-                                            <th class="hidden-480 center">酒店主题</th>
-                                            <th class="hidden-480 center">配套设施情况</th>
-                                            <th class="center">酒店星级</th>
+                                            <th class="center">订单编号</th>
+                                            <th class="center">酒店id</th>
+                                            <th class="hidden-480 center">联系人</th>
+                                            <th class="hidden-480 center">金额</th>
+                                            <th class="center">订单状态</th>
                                             <th class="center">操作</th>
                                         </tr>
                                         </thead>
@@ -528,7 +528,7 @@
                                         require_once '../controller/utils/showHelper.php';
                                         $helper = ShowHelper::getInstance();
                                         $pdoMysql = new PdoMySQL();
-                                        $allrows = $pdoMysql->find("hotel");
+                                        $allrows = $pdoMysql->find("order","`status`=0");
                                         foreach($allrows as $row){
                                             echo '<tr>';
                                             echo '<td class="center">';
@@ -538,14 +538,14 @@
                                             echo '</label>';
                                             echo '</td>';
 
-                                            echo '<td class="center" id="hotelName">'.$row['hotelName'].'</td>';
-                                            echo '<td class="hidden-480 center">'.$row['address'].'</td>';
-                                            echo '<td class=" center">'.$helper->getSubject($row['subject']).'</td>';
-                                            echo '<td class="hidden-480 center">'.$helper->getEquipmentCondition($row['hasWifi'],$row['hasParking'],$row['hasPackage'],$row['hasMeetingRoom']).'</td>';
-                                            echo '<td class=" hidden-480 center">'.$row['stars'].'</td>';
+                                            echo '<td class="center" id="hotelName">'.$row['orderId'].'</td>';
+                                            echo '<td class="hidden-480 center">'.$row['hotelId'].'</td>';
+                                            echo '<td class=" center">'.$row['linkman'].'</td>';
+                                            echo '<td class="hidden-480 center">'.$row['totalPrice'].'</td>';
+                                            echo '<td class=" hidden-480 center">'.$helper->getOrderStatus($row['status']).'</td>';
                                             echo '<td class="center">';
                                             echo '<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">';
-                                            echo '<a  class="btn btn-xs btn-info"  role="button" href="roomList.php?name='.$row['hotelName'].'&id='.$row['id'].'&wifi='.$row['hasWifi'].'&equipment='.$helper->getEquipmentCondition($row['hasWifi'],$row['hasParking'],$row['hasPackage'],$row['hasMeetingRoom']).'"><i class="icon-remove bigger-120">房间管理</i></a>';
+                                            echo '<a  class="btn btn-xs btn-info"  role="button" href=""><i class="icon-remove bigger-120">订单管理</i></a>';
                                             echo '</div>';
                                             echo '<div class="visible-xs visible-sm hidden-md hidden-lg ">';
                                             echo '<div class="inline position-relative center">';
