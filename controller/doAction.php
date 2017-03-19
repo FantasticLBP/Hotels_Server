@@ -56,7 +56,20 @@ if(!function_exists(get_magic_quotes_gpc) || !get_magic_quotes_gpc() ) {
 			echo'<script language="JavaScript">window.alert("账号或密码错误"),location.href="../view/login.php";</script>';
 		}
 
-	}elseif($act==='seek'){
+	}else if($act === "reg"){
+		if($username==""){
+			echo'<script language="JavaScript">window.alert("请输入用户名"),location.href="../view/login.php?viewFlag=signup-box";</script>';
+		}else if($password==""){
+			echo'<script language="JavaScript">window.alert("请输入密码"),location.href="../view/login.php?viewFlag=signup-box";</script>';
+		}
+		//	$regtime= date('Y-m-d H:i:s');
+		$data=compact('username','password');
+		$res=$PdoMySQL->add($data, "admin");
+		$lastInsertId=$PdoMySQL->getLastInsertId();
+		if($res){
+			echo'<script language="JavaScript">window.alert("注册成功，请登陆"),location.href="../view/login.php";</script>';
+		}
+	}else if($act==='seek'){
 		if($email==""){
 			echo'<script language="JavaScript">window.alert("请注册时的邮箱便于您找回密码"),location.href="../view/login.php?viewFlag=forgot-box";</script>';
 		}
