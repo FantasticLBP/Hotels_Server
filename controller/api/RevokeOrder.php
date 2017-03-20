@@ -16,7 +16,7 @@ require_once 'Response.php';
 class RevokeOrder
 {
     private $tableName = "order";
-    private $telephone = "";
+    private $key = "";
     private $orderId = "";
 
     protected static $_instance = null;
@@ -41,18 +41,14 @@ class RevokeOrder
     }
 
     function revokeOrder(){
-        self.$this->telephone = $_REQUEST["telephone"];
+        self.$this->key = $_REQUEST["key"];
         self.$this->orderId = $_REQUEST["orderId"];
 
 
         $mysqlPdo = new PdoMySQL();
 
 
-        if($this->telephone == ""){
-            Response::show(201,"fail","非安全的数据请求","json");
-        }
-        $userRows = $mysqlPdo->find("user","telephone='$this->telephone'");
-        if($userRows[0]["telephone"] != $this->telephone){
+        if($this->key == "" || $this->key !== "TheHotelReversationApplication" ){
             Response::show(201,"fail","非安全的数据请求","json");
         }
 

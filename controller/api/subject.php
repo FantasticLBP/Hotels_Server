@@ -15,7 +15,7 @@ require_once 'Response.php';
 class Subject
 {
     private $tableName = "subject";
-    private $telephone = "";
+    private $key = "";
 
 
 
@@ -42,16 +42,11 @@ class Subject
 
     function getSubjects()
     {
-        self . $this->telephone = $_REQUEST["telephone"];
+        self . $this->key = $_REQUEST["key"];
         $mysqlPdo = new PdoMySQL();
 
 
-        if($this->telephone == ""){
-            Response::show(201,"fail","非安全的数据请求","json");
-        }
-
-        $userRows = $mysqlPdo->find("user","telephone='$this->telephone'");
-        if($userRows[0]["telephone"] != $this->telephone){
+        if($this->key == "" || $this->key !== "TheHotelReversationApplication"){
             Response::show(201,"fail","非安全的数据请求","json");
         }
 

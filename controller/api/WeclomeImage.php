@@ -15,8 +15,8 @@ require_once 'Response.php';
 
 class WelcomeImage{
     private  $tableName = "subject";
-    private  $telephone = "";           //手机号码
     private  $size = 0;
+    private  $Key = "";
 
 
     protected static $_instance = null;
@@ -34,15 +34,11 @@ class WelcomeImage{
     }
 
     function getImage(){
-        self.$this->telephone = $_GET["telephone"];
         self.$this->size = $_REQUEST["size"];
+        self.$this->key = $_REQUEST["key"];
         $mysqlPdo = new PdoMySQL();
 
-        if($this->telephone == "" || $this->size ==0 || !isset($this->size)){
-            Response::show(201,"fail","非安全的数据请求","json");
-        }
-        $userRows = $mysqlPdo->find("user","telephone='$this->telephone'");
-        if($userRows[0]["telephone"] != $this->telephone){
+        if($this->key == "" || $this->key !== "TheHotelReversationApplication"){
             Response::show(201,"fail","非安全的数据请求","json");
         }
 

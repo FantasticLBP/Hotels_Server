@@ -16,7 +16,7 @@ require_once 'Response.php';
 class HotelList
 {
     private $tableName = "hotel";
-    private $telephone = "";
+    private $key = "";
     private $cityName= "";
     private $subjectId = "";
     private $page = 0;
@@ -51,7 +51,7 @@ class HotelList
 
     function getHotels()
     {
-        self.$this->telephone = $_REQUEST["telephone"];
+        self.$this->key= $_REQUEST["key"];
         self.$this->subjectId = $_REQUEST["subjectId"];
         self.$this->cityName = $_REQUEST["cityName"];
         self.$this->page = $_REQUEST["page"];
@@ -64,13 +64,10 @@ class HotelList
 
         $mysqlPdo = new PdoMySQL();
 
-        if($this->telephone == ""){
+        if($this->key == "" || $this->key !== "TheHotelReversationApplication" ){
             Response::show(201,"fail","非安全的数据请求","json");
         }
-        $userRows = $mysqlPdo->find("user","telephone='$this->telephone'");
-        if($userRows[0]["telephone"] != $this->telephone){
-            Response::show(201,"fail","非安全的数据请求","json");
-        }
+
 
         //1、根据城市、酒店主题、分页字段查询主题酒店列表
         if($this->request == "1" ){

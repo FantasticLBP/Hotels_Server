@@ -14,9 +14,7 @@ class Response {
         if(!is_numeric($code)) {
             return '';
         }
-
         //$type = isset($_GET['format']) ? $_GET['format'] : self::JSON;
-
         $result = array(
             'code' => $code,
             'message' => $message,
@@ -100,5 +98,5 @@ class Response {
         }
         return $xml;
     }
-
 }
+?>

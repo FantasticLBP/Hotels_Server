@@ -17,7 +17,7 @@ require_once 'Response.php';
 class Pay
 {
     private  $tableName = "order";
-    private  $telephone = 0;
+    private  $key = "";
     private  $orderId = "";
 
     protected static  $_instance = null;
@@ -41,14 +41,10 @@ class Pay
     public function pay(){
         $mysqlPdo = new PdoMySQL();
 
-        self.$this->telephone = $_REQUEST["telephone"];
+        self.$this->key = $_REQUEST["key"];
         self.$this->orderId = $_REQUEST["orderId"];
 
-        if($this->telephone == ""){
-            Response::show(201,"fail","非安全的数据请求","json");
-        }
-        $userRows = $mysqlPdo->find('user',"telephone='$this->telephone'");
-        if($userRows[0]["telephone"] != $this->telephone){
+        if($this->key == "" || $this->key !== "TheHotelReversationApplication" ){
             Response::show(201,"fail","非安全的数据请求","json");
         }
 
