@@ -15,7 +15,7 @@ require_once 'Response.php';
 
 class Room
 {
-    private $tableName = "hotel";
+    private $tableName = "room";
     private $telephone = "";
     private  $hotelId = "";
 
@@ -57,8 +57,8 @@ class Room
         }
 
         //1、根据酒店id查询房间信息
-        $allrows = $mysqlPdo->find($this->tableName,"id='$this->hotelId'");
-        Response::show(200,'主题酒店列表获取成功',$allrows,'json');
+        $allrows = $mysqlPdo->find($this->tableName,"hotelId='$this->hotelId'");
+        Response::show(200,'房间列表获取成功',$allrows,'json');
 
 
     }

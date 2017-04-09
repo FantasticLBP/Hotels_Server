@@ -525,13 +525,11 @@
 
                                         <tbody>
                                         <?php
-                                        $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
-                                        $pdo->query("set names utf8");
-                                        $sql="select * from user";
-                                        $stmt=$pdo->prepare($sql);
-                                        $stmt->execute();
-                                        $allrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                        require_once '../model/PdoMySQL.class.php';
+                                        require_once '../model/config.php';
 
+                                        $pdo =  new PdoMySQL();
+                                        $allrows = $pdo->find("user");
                                         foreach($allrows as $row){
                                             echo '<tr>';
                                             echo '<td class="center">';

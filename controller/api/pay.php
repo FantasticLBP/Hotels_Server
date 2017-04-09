@@ -1,4 +1,4 @@
-／<?php
+<?php
 
 /**
  * Created by PhpStorm.
@@ -48,11 +48,8 @@ class Pay
             Response::show(201,"fail","非安全的数据请求","json");
         }
 
-        $pdo=new PdoMySQL();;
-        $pdo->query("set names utf8");
-        $sql = 'update `order` set `status`=1 where `orderId` = "'.$this->orderId.'";';
-        $stmt=$pdo->prepare($sql);
-        $res = $stmt->execute();
+        $pdo=new PdoMySQL();
+        $res = $pdo->update(["status"=>1],"`order`","orderId='$this->orderId'");
         if($res){
             //酒店下单成功
             Response::show(200,"success","","json");
