@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.4.10
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Mar 15, 2017 at 07:46 AM
+-- Generation Time: Apr 09, 2017 at 06:37 AM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -29,14 +29,15 @@ CREATE TABLE `admin` (
   `gender` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '性别',
   `birthday` varchar(22) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '出生日期',
   `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '姓名'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `status`, `telephone`, `gender`, `birthday`, `name`) VALUES
-(1, 'admin', 'MTIzNDU2', 1, NULL, '', NULL, '');
+(1, 'admin', 'MTIzNDU2', 1, NULL, '', NULL, ''),
+(2, 'test', 'MTIzNDU2', 0, NULL, '', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -46,7 +47,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `status`, `telephone`, `gende
 
 CREATE TABLE `evaluation` (
   `id` int(10) NOT NULL COMMENT '评价id',
-  `hotel_id` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '酒店id',
+  `orderId` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '订单id',
   `evaluateTime` varchar(14) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '评价时间',
   `userId` int(10) NOT NULL COMMENT '用户id',
   `content` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '评价内容'
@@ -117,13 +118,13 @@ CREATE TABLE `order` (
   `linkman` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '联系人',
   `telephone` varchar(11) NOT NULL COMMENT '联系电话',
   `totalPrice` int(100) NOT NULL COMMENT '总金额',
-  `status` int(1) NOT NULL DEFAULT '0' COMMENT '默认订单状态：0，待付款：1，未出行：2，待评价：3',
+  `status` int(1) NOT NULL DEFAULT '0' COMMENT '默认订单状态：0，待付款：1，未出行：2，待评价：3：完成',
   `roomId` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '房间id',
   `startTime` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '入住时间',
   `endTime` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '离开时间',
   `orderId` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '订单id',
   `livingPeriod` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '1' COMMENT '住宿日期'
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `order`
@@ -136,7 +137,29 @@ INSERT INTO `order` (`id`, `hotelId`, `merberId`, `linkman`, `telephone`, `total
 (4, '3', '22', '陈独秀', '15757118111', 385, 1, '5', '03-12', '03-16', 'G311536200436636', '4'),
 (5, '5', '22', '陈独秀', '15757118111', 58888, 3, '8', '03-12', '03-24', 'G311541010208540', '12'),
 (6, '7', '22', '陈独秀', '15757118111', 1268, 1, '10', '03-12', '03-22', 'G311543120932576', '10'),
-(7, '8', '22', '陈独秀', '15757118111', 480, 0, '11', '03-12', '03-14', 'G311544085366043', '2');
+(8, '6', '22', '陈独秀', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315612514598577', '9'),
+(9, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315613502529444', '9'),
+(10, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315614002838234', '9'),
+(11, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315615109957328', '9'),
+(12, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315615385577582', '9'),
+(13, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315618046891151', '9'),
+(14, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315618056108545', '9'),
+(15, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315634677606486', '9'),
+(16, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315635322879718', '9'),
+(17, '6', '22', '昔年', '15757118111', 478, 0, '9', '03-15', '03-24', 'G315635386954149', '9'),
+(18, '1', '22', '陈独秀', '15757118111', 647, 0, '1', '03-15', '03-18', 'G315654843400406', '3'),
+(19, '1', '22', '陈独秀', '15757118111', 647, 0, '1', '03-15', '03-18', 'G315655009870417', '3'),
+(20, '1', '22', '陈独秀', '15757118111', 647, 0, '1', '03-15', '03-18', 'G315655014515844', '3'),
+(21, '1', '22', '陈独秀', '15757118111', 647, 1, '1', '03-15', '03-18', 'G315655452618177', '3'),
+(22, '1', '22', '陈独秀', '15757118111', 647, 1, '1', '03-15', '03-18', 'G315656203241014', '3'),
+(23, '1', '22', '昔年', '15757118111', 647, 1, '1', '03-15', '03-18', 'G315714702692829', '3'),
+(24, '1', '2', '陈独秀', '15757118111', 647, 0, '1', '03-21', '03-24', 'G321112105917020', '3'),
+(25, '1', '2', '陈独秀', '15757118111', 647, 1, '1', '03-21', '03-24', 'G321113430946111', '3'),
+(26, '1', '2', '陈独秀', '15757118111', 647, 1, '1', '03-24', '03-29', 'G324260783827830', '4.'),
+(27, '1', '2', '陈独秀', '15757118111', 647, 1, '1', '03-24', '03-31', 'G324264180727873', '6.'),
+(28, '1', '2', '陈独秀', '15757118111', 647, 1, '1', '03-24', '03-30', 'G324265331798560', '5.'),
+(29, '1', '2', '陈独秀', '15757118111', 647, 1, '1', '03-24', '03-30', 'G324267574728868', '5.'),
+(30, '1', '2', '陈独秀', '15757118111', 647, 1, '1', '03-24', '03-31', 'G324269367472294', '6.');
 
 -- --------------------------------------------------------
 
@@ -192,15 +215,15 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`id`, `hotelId`, `type`, `znecancelPrice`, `znePrice`, `delegatecancelPrice`, `delegatePrice`, `hasWindow`, `hasWifi`, `equipmentCondtion`, `floor`, `square`, `bedScale`, `availablePerson`, `roomCount`, `otherInfo`, `count`, `image1`, `image2`, `image3`, `image4`, `image5`) VALUES
-(1, 1, '高级双床房', 647, 640, 640, 630, 1, 1, '全优 ', '2', 88, '3米宽', 2, 14, '红木高级大床房', 14, 'postedImage/9a936772b639e714a234ee79751b53ae.jpg', 'postedImage/30dc42709d7f5088d871046aafa3bc6c.jpg', 'postedImage/7f186a86f98aed5ac10e791f246f4f2b.jpg', '', ''),
-(2, 1, '豪华双床房 ', 767, 750, 766, 745, 1, 1, '全优 ', '2', 120, '3米宽', 2, 8, '到店送果盘哦', 8, 'postedImage/d668731025cb755d55099fba08e43a44.jpg', 'postedImage/7958869bef6891df019c1f5741130c7b.jpg', 'postedImage/1ed004821082593f22269c6c1df3fe0b.jpg', '', ''),
-(3, 1, '行政大床房 ', 1134, 1010, 1123, 1000, 1, 0, '全优 ', '1', 130, '3米宽', 2, 8, '果盘赠送', 8, 'postedImage/d054746f046e1a4a69a5f4c34c65709a.jpg', '', '', '', ''),
+(1, 1, '高级双床房', 647, 640, 640, 630, 1, 1, '全优 ', '2', 88, '3米宽', 2, 14, '红木高级大床房', 1, 'postedImage/9a936772b639e714a234ee79751b53ae.jpg', 'postedImage/30dc42709d7f5088d871046aafa3bc6c.jpg', 'postedImage/7f186a86f98aed5ac10e791f246f4f2b.jpg', '', ''),
+(2, 1, '豪华双床房 ', 767, 750, 766, 745, 1, 1, '全优 ', '2', 120, '3米宽', 2, 8, '到店送果盘哦', 1, 'postedImage/d668731025cb755d55099fba08e43a44.jpg', 'postedImage/7958869bef6891df019c1f5741130c7b.jpg', 'postedImage/1ed004821082593f22269c6c1df3fe0b.jpg', '', ''),
+(3, 1, '行政大床房 ', 1134, 1010, 1123, 1000, 1, 0, '全优 ', '1', 130, '3米宽', 2, 8, '果盘赠送', 1, 'postedImage/d054746f046e1a4a69a5f4c34c65709a.jpg', '', '', '', ''),
 (4, 2, '凯悦客房 ', 1725, 1308, 1590, 1300, 1, 1, '全优 ', '3', 120, '3米宽', 2, 12, '无', 12, 'postedImage/6810c5fe04d8be64af56aac0139de29e.jpg', '', '', '', ''),
 (5, 3, '高级标准房 ', 385, 379, 381, 360, 1, 1, '全优 ', '1', 80, '3米宽', 2, 12, '果盘赠送', 12, 'postedImage/c06b5ddac656451c0b160e42c9253282.jpg', 'postedImage/45476863a1c1ef89f3f31972ee08ffd3.jpg', 'postedImage/a939d3b73ea19dcae25ff571857f9fc3.jpg', '', ''),
-(6, 4, '高级双床房', 359, 363, 399, 350, 1, 1, '全优 ', '6', 100, '3米宽', 2, 4, '无', 4, 'postedImage/5a599da64c12e10f6711489b4d8a3d2e.jpg', '', '', '', ''),
+(6, 4, '高级双床房', 359, 363, 399, 350, 1, 1, '全优 ', '6', 100, '3米宽', 2, 4, '无', 1, 'postedImage/5a599da64c12e10f6711489b4d8a3d2e.jpg', '', '', '', ''),
 (7, 4, '亲子房 ', 499, 499, 529, 482, 1, 1, '全优 ', '6', 100, '3米宽', 2, 4, '无', 4, 'postedImage/9d776a335bf2384593d079c06f397f4e.jpg', 'postedImage/6c8e59409a99a83c15011000ec817016.jpg', 'postedImage/d9bd30b03217abfe22f4fe51deac7845.jpg', '', ''),
 (8, 5, '总统套房 ', 58888, 58888, 58888, 58888, 1, 1, '优秀 ', '4', 300, '5米宽', 2, 10, '送水果盘', 10, 'postedImage/9d4add05db2cb379b6c4b970ea1ce66f.jpg', 'postedImage/47ec929c969c5743793baf0b8b7e1658.jpg', 'postedImage/7ecd3d952a26ffa65327a6f02ac71b31.jpg', 'postedImage/1c4f646bf853b2dd15349d3e2af00110.jpg', ''),
-(9, 6, '君亭家庭房 ', 478, 469, 460, 455, 1, 1, '全优 ', '2', 80, '3米宽', 2, 2, '无', 2, 'postedImage/4cd182201714ca0d9f0f1b647a2961c1.jpg', '', '', '', ''),
+(9, 6, '君亭家庭房 ', 478, 469, 460, 455, 1, 1, '全优 ', '2', 80, '3米宽', 2, 2, '无', 0, 'postedImage/4cd182201714ca0d9f0f1b647a2961c1.jpg', '', '', '', ''),
 (10, 7, '广场俱乐部商务房 ', 1268, 1208, 1238, 1200, 1, 1, '全优 ', '4', 120, '4米宽', 2, 12, '无', 12, 'postedImage/e913ec88af2282e971234c9a8048f82f.jpg', '', '', '', ''),
 (11, 8, '特价房 ', 498, 480, 480, 450, 1, 1, '优秀 ', '1', 120, '3米宽', 2, 6, '无', 6, 'postedImage/8d23294fe90f424c0a09ea9a75f27371.jpg', 'postedImage/8d50f607fba1647f81276dca9fde2058.jpg', '', '', ''),
 (12, 9, '君亭概念房 ', 829, 828, 850, 840, 1, 1, '良好 ', '2', 120, '3米宽', 2, 8, '无', 8, 'postedImage/9ba9230bf9e2e88916535f8d3be0f509.jpg', 'postedImage/eb3551b26e064c39f988b003de8b6457.jpg', '', '', ''),
@@ -257,7 +280,7 @@ CREATE TABLE `user` (
   `avator` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '头像',
   `account` int(20) NOT NULL DEFAULT '0' COMMENT '账户余额',
   `nickname` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '昵称'
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
@@ -265,9 +288,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `telephone`, `gender`, `birthday`, `password`, `avator`, `account`, `nickname`) VALUES
 (1, '15757118174', '男', '1995-02-20', '123456', '', 0, '大忙人'),
-(22, '15757118111', '男', '2017-2-19', '666666', 'avator/98d0f7a5c04310b674a4e4a636dac621.jpg', 0, '陈独秀'),
-(23, '15757118113', '', '', 'lbp321', '', 0, ''),
-(24, '15757118112', '', '', '123456', '', 0, '');
+(2, '15757118111', '女', '2009-3-24', '123456', 'avator/d25b451bf06ffc6bbe6e1954670611b0.jpg', 0, '陈独秀');
 
 --
 -- Indexes for dumped tables
@@ -329,7 +350,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `evaluation`
 --
@@ -344,7 +365,7 @@ ALTER TABLE `hotel`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `orderList`
 --
@@ -364,4 +385,4 @@ ALTER TABLE `subject`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=25;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=3;
