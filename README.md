@@ -19,3 +19,27 @@
 <p>ToDo：后期可能会实现MVC框架优化。客户端接口想实现缓存出来，当客户端请求的数据存在于缓存的时候直接从缓存中读取。</p>
 
 如果有不懂的地方可以加入QQ交流群讨论：<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=c9dc4ab0b2062e0004b3b2ed556da1ce898631742e15780297feb3465ad08eda">**515066271**</a>。这个QQ群讨论技术范围包括：iOS、H5混合开发、前端开发、PHP开发，欢迎大家讨论技术。
+
+
+
+<h3>福利，福利</h3>
+<p>如果想学习客户端开发的同学可以看看这个项目。项目地址：(https://github.com/FantasticLBP/Hotels)</p>
+
+**实现了类似艺龙App的预定酒店功能，包括酒店搜索、特色酒店推荐、特惠酒店推荐等等功能，可以预定酒店、查看订单，唯独不能支付（支付功能必须由公司的名义注册，个人练手注册不了）。**
+<ul>包括iOS开发的常见功能：
+<li>自定义NavigationController实现全屏右滑返回上一控制器</li>
+<li>UICollecionView展现界面</li>
+<li>UITableview上拉加载、下面刷新功能</li>
+<li>Masonry自动布局库的使用</li>
+<li>封装好的启动欢迎页</li>
+<li>YYModel字典转模型</li>
+<li>复杂界面的布局</li>
+<li>cell的重用内存优化</li>
+<li>工程结构一幕了然，便于拓展</li>
+<li>界面采用代码实现，部分界面采用xib实现。整个代码可读性比较好、代码规范、有注释说明，配合服务端是自己用php写的，Api也是php实现的。</li>
+</ul>
+
+
+<h3>效果截图</h3>
+
+![App效果图](https://raw.githubusercontent.com/FantasticLBP/Hotels/master/1.gif "这是App的效果图")
