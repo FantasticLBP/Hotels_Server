@@ -1,4 +1,4 @@
-<?php
+／<?php
 
 /**
  * Created by PhpStorm.
@@ -48,7 +48,7 @@ class Pay
             Response::show(201,"fail","非安全的数据请求","json");
         }
 
-        $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
+        $pdo=new PdoMySQL();;
         $pdo->query("set names utf8");
         $sql = 'update `order` set `status`=1 where `orderId` = "'.$this->orderId.'";';
         $stmt=$pdo->prepare($sql);

@@ -18,7 +18,7 @@ function inCheck(){
         echo "参数错误，信息填写不全";
         return;
     }else{
-        $pdo=new PDO('mysql:host=localhost;dbname=db_pet','root','root');
+        $pdo=new PdoMySQL();
         $sql1="select * from instruction  where  mouseid ='".$mid."'";
         $pdo->query("set names utf8");
         $stmt1=$pdo->prepare($sql1);

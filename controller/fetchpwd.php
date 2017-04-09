@@ -10,7 +10,7 @@ require_once '../model/config.php';
 
 
 
-$pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
+$pdo=new PdoMySQL();
 		$sql1="select username from admin";
 		$stmt1=$pdo->prepare($sql1);
 		$stmt1->execute();
@@ -20,7 +20,7 @@ $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
 if(!in_array($q,$username)){
 	$response="该账号未被注册";
 }else{
-	$pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
+	$pdo=new PdoMySQL();
 	$sql1="select * from `admin` where username=?";
 	$stmt1=$pdo->prepare($sql1);
  	$stmt1->execute(array("admin"));

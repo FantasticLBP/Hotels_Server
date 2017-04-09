@@ -139,8 +139,7 @@
                                                            name="rememberUser"/>
                                                     <span class="lbl"> 记住</span>
                                                 </label>
-                                                <input type="submit" value="登录" onClick="check();"
-                                                       class="width-35 pull-right btn btn-sm btn-primary"/>
+                                                <input type="submit" value="登录" class="width-35 pull-right btn btn-sm btn-primary"/>
 
                                             </div>
 

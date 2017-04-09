@@ -297,7 +297,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="../index.php">
 										<i class="icon-off"></i>
 										退出
 									</a>

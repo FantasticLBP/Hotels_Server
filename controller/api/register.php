@@ -26,7 +26,7 @@
             self.$this->telephone = $_GET['telephone'];
             self.$this->password = $_GET["password"];
 
-            $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
+            $pdo=new PdoMySQL();
             $sql='INSERT INTO user VALUES ("","'.$this->telephone.'","","","'.$this->password.'","","","")';
             $stmt=$pdo->prepare($sql);
             $stmt->execute();

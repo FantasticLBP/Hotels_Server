@@ -15,5 +15,5 @@ function logut(){
     $_SESSION['password']="";
     $_SESSION['usertype']="";
 }
-echo'<script language="JavaScript">window.location.href="http://localhost:8888/Hotels_Server/view/login.php";</script>';
+echo'<script language="JavaScript">window.location.href="../view/login.php";</script>';
 ?>

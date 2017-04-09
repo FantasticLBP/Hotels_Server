@@ -1,7 +1,9 @@
 <?php
 //error_reporting(0);
+require_once '../../model/PdoMySQL.class.php';
+require_once '../../model/config.php';
 $username=$_GET["username"];
-$pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
+$pdo=new PdoMySQL();
 $sql5="select username from admin";
 $stmt5=$pdo->prepare($sql5);
 $stmt5->execute();

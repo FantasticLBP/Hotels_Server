@@ -40,7 +40,7 @@
 
 
 
-            $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
+            $pdo=new PdoMySQL();
              $pdo->query("set names utf8");
             if ($this->type == 1) {
                 $sql = 'update user set nickname="'.$this->nickName.'" where telephone = "'.$this->telephone.'";';  

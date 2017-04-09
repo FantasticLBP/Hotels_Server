@@ -28,7 +28,7 @@
             self.$this->telephone = $_GET["telephone"];
             self.$this->password = $_GET["password"];
 
-            $pdo=new PDO('mysql:host=localhost;dbname=db_Hotel','root','root');
+            $pdo= new PdoMySQL();;
             $pdo->query("set names utf8");
             $sql = "SELECT * FROM user WHERE telephone = '".$this->telephone."';";
             $stmt=$pdo->prepare($sql);
