@@ -27,14 +27,14 @@
             self.$this->password = $_GET["password"];
 
             $pdo=new PdoMySQL();
-            $sql='INSERT INTO user VALUES ("","'.$this->telephone.'","","","'.$this->password.'","","","")';
-            $stmt=$pdo->prepare($sql);
-            $stmt->execute();
+            $registerRes = $pdo->add(["telephone"=>$this->telephone,"gender"=>"","birthday"=>"","password"=>$this->password,"avator"=>"","account"=>"","nickname"=>""],"user");
+
+            if($registerRes){
+                Response::show(200,'success',"注册成功",'json');
+            }
         }
     }
 
     $api = Register::getInstance();
     $api->register();
-    Response::show(200,'success',"注册成功",'json');
-
 ?>

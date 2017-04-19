@@ -61,7 +61,7 @@ class OrderList
         }
 
         if(isset($this->type)){
-            $allrows = $mysqlPdo->find($this->tableName,"status=$this->type","","","","",[(intval($this->page)-1)*intval($this->size),intval($this->page)*intval($this->size)]);
+            $allrows = $mysqlPdo->find($this->tableName,"status=$this->type and telephone=$this->telephone","","","","",[(intval($this->page)-1)*intval($this->size),intval($this->page)*intval($this->size)]);
             foreach($allrows as &$row){
                 $roomId = $row["roomId"];
                 $hotelId = $row["hotelId"];
@@ -72,7 +72,7 @@ class OrderList
             }
             Response::show(200,'订单列表返回成功',$allrows,'json');
         }else{
-            $allrows = $mysqlPdo->find($this->tableName,"","","","","",[(intval($this->page)-1)*intval($this->size),intval($this->page)*intval($this->size)]);
+            $allrows = $mysqlPdo->find($this->tableName,"telephone=$this->telephone","","","","",[(intval($this->page)-1)*intval($this->size),intval($this->page)*intval($this->size)]);
             foreach($allrows as &$row){
                 $roomId = $row["roomId"];
                 $hotelId = $row["hotelId"];

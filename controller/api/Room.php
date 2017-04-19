@@ -16,7 +16,7 @@ require_once 'Response.php';
 class Room
 {
     private $tableName = "room";
-    private $telephone = "";
+    private $key = "";
     private  $hotelId = "";
 
     protected static $_instance = null;
@@ -42,21 +42,17 @@ class Room
 
     function getRoomInfo()
     {
-        self.$this->telephone = $_REQUEST["telephone"];
+        self.$this->key = $_REQUEST["key"];
         self.$this->hotelId = $_REQUEST["hotelId"];
 
 
         $mysqlPdo = new PdoMySQL();
 
-        if($this->telephone == ""){
-            Response::show(201,"fail","非安全的数据请求","json");
-        }
-        $userRows = $mysqlPdo->find("user","telephone='$this->telephone'");
-        if($userRows[0]["telephone"] != $this->telephone){
+        if($this->key == "" || $this->key != "TheHotelReversationApplication"){
             Response::show(201,"fail","非安全的数据请求","json");
         }
 
-        //1、根据酒店id查询房间信息
+
         $allrows = $mysqlPdo->find($this->tableName,"hotelId='$this->hotelId'");
         Response::show(200,'房间列表获取成功',$allrows,'json');
 
