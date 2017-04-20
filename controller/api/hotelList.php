@@ -84,7 +84,6 @@ class HotelList
             //3、查询城市、分页、酒店类型查询酒店列表
         }else if($this->request == "3" ){
             $city = str_replace("市","",$this->cityName);
-            $city = str_replace("市","",$this->cityName);
             $allrows = $mysqlPdo->find($this->tableName,"address like '%$city%' and kindType='$this->type'","","","","",[(intval($this->page)-1)*intval($this->size),intval($this->page)*intval($this->size)]);
             Response::show(200,'特色酒店列表获取成功',$allrows,'json');
 
@@ -93,6 +92,7 @@ class HotelList
             $city = str_replace("市","",$this->cityName);
             $allrows = $mysqlPdo->find($this->tableName,"kindType='$this->type'","","","","",[(intval($this->page)-1)*intval($this->size),intval($this->page)*intval($this->size)]);
             Response::show(200,'特色酒店列表获取成功',$allrows,'json');
+
 
             //5、查询城市、分页、酒店类型查询酒店列表
         }else if($this->request == "5"){

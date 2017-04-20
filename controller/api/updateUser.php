@@ -41,28 +41,34 @@
 
 
             $pdo=new PdoMySQL();
-             $pdo->query("set names utf8");
             if ($this->type == 1) {
-                $sql = 'update user set nickname="'.$this->nickName.'" where telephone = "'.$this->telephone.'";';  
-                $stmt=$pdo->prepare($sql);
-                $stmt->execute();
-                Response::show(200,'success',"昵称更改成功",'json'); 
-                
+                $res = $pdo->update(["nickname"=>$this->nickName],"user","telephone=$this->telephone");
+                if($res){
+                    Response::show(200,'success',"昵称更改成功",'json');
+                }else{
+                    Response::show(201,'fail',"昵称更改失败",'json');
+                }
             }else if ($this->type == 2) {
-                $sql = 'update user set gender="'.$this->gender.'" where telephone = "'.$this->telephone.'";';
-                $stmt=$pdo->prepare($sql);
-                $stmt->execute();
-                Response::show(200,'success',"性别更改成功",'json');
+                $res = $pdo->update(["gender"=>$this->gender],"user","telephone=$this->telephone");
+                if($res){
+                    Response::show(200,'success',"性别更改成功",'json');
+                }else{
+                    Response::show(201,'fail',"性别更改失败",'json');
+                }
             }else if ($this->type == 3) {
-                $sql = 'update user set birthday="'.$this->birthday.'" where telephone = "'.$this->telephone.'";';  
-                $stmt=$pdo->prepare($sql);
-                $stmt->execute();
-                Response::show(200,'success',"生日更改成功",'json');
+                $res = $pdo->update(["birthday"=>$this->birthday],"user","telephone=$this->telephone");
+                if($res){
+                    Response::show(200,'success',"生日更改成功",'json');
+                }else{
+                    Response::show(201,'fail',"生日更改失败",'json');
+                }
             }else{
-                $sql = 'update user set password="'.$this->password.'" where telephone = "'.$this->telephone.'";'; 
-                $stmt=$pdo->prepare($sql);
-                $stmt->execute();
-                Response::show(200,'success',"密码更改成功",'json'); 
+                $res = $pdo->update(["password"=>$this->password],"user","telephone=$this->telephone");
+                if($res){
+                    Response::show(200,'success',"密码更改成功",'json');
+                }else{
+                    Response::show(201,'fail',"密码更改失败",'json');
+                }
             }
         }
     }
