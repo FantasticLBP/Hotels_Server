@@ -1,43 +1,23 @@
 <?php
-error_reporting(0);
-$q=$_GET["q"];
-$table="admin";
 
-
-error_reporting(0);
 require_once '../model/PdoMySQL.class.php';
 require_once '../model/config.php';
 
+require_once 'api/Response.php';
+
+//表名称
+$table = "admin";
+//1、拿到请求的账号
+$username  = $_REQUEST["username"];
 
 
-$pdo=new PdoMySQL();
-		$sql1="select username from admin";
-		$stmt1=$pdo->prepare($sql1);
-		$stmt1->execute();
-		while($row1=$stmt1->fetch()){
-			$username[]=$row1['username'];
-		}
-if(!in_array($q,$username)){
-	$response="该账号未被注册";
+$pdoOperator = new PdoMySQL();
+$passwordRows = $pdoOperator->find($table,"username='".$username."'");
+$row = $passwordRows[0];
+if(count($passwordRows) >0){
+	Response::show("200","密码找回成功",base64_decode($row["password"]));
 }else{
-	$pdo=new PdoMySQL();
-	$sql1="select * from `admin` where username=?";
-	$stmt1=$pdo->prepare($sql1);
- 	$stmt1->execute(array("admin"));
-	while($row1 = $stmt1->fetch()){
-		$username1=$row1['username'];
-		if($username1==""){
-			return;
-		}
-		$password=base64_decode($row1['password']);
-		$response="用户名:".$username1." 密码:".$password;
-	}
+	Response::show("200","该账号未注册","");
 }
-echo $response;
+
 ?>
-
-
-
-
-
-

@@ -26,23 +26,22 @@
     </script>
     <script type="text/javascript">
         function showHint(str) {
-            var xmlhttp;
-            if (str.length == 0) {
-                document.getElementById("searchResult").innerHTML = "";
-                return;
-            }
-            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else {// code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function () {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("searchResult").innerHTML = xmlhttp.responseText;
+            $.ajax({
+                dataType: "json",
+                type: "get",
+                url: "../controller/fetchpwd.php?username=" + str,
+                success: function(data) {
+                    console.log(data);
+                    if(data.data != ""){
+                        document.getElementById("searchResult").innerHTML = data.data;
+                    }else{
+                        document.getElementById("searchResult").innerHTML = data.message;
+                    }
+                },
+                error: function() {
+                    document.getElementById("searchResult").innerHTML = "请检查网络后重试";
                 }
-            }
-            xmlhttp.open("GET", "../controller/fetchpwd.php?q=" + str, true);
-            xmlhttp.send();
+            });
         }
     </script>
 
