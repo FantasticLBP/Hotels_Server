@@ -47,3 +47,5 @@
 <h3>效果截图</h3>
 
 ![App效果图](https://raw.githubusercontent.com/FantasticLBP/Hotels/master/1.gif "这是App的效果图")
+
+## 代码如需用于商业用途，请联系本人，否则追究法律责任
