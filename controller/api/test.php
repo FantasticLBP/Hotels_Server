@@ -1,11 +1,5 @@
 <?php
-//$tmp=array();
-//while(count($tmp)<1){
-//    $tmp[]=mt_rand(1,20);
-//    $tmp=array_unique($tmp);
-//}
-//print_r($tmp);
-
-$array = [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,23,3,43,5],[1,2,3,4,5]];
-var_dump($array[4]) ;
-//?>
+require_once 'Response.php';
+$array = [["name"=>"电压","value"=>"20V"],["name"=>"电流","value"=>"2.2A"]];
+Response::show(200,"success",$array,"json");
+?>

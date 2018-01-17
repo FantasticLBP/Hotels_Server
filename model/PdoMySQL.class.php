@@ -146,6 +146,7 @@ class PdoMySQL{
 		}
 		$sets=rtrim($sets,',');
 		$sql="UPDATE {$table} SET {$sets} ".self::parseWhere($where).self::parseOrder($order).self::parseLimit($limit);
+		echo  $sql;
 		return self::execute($sql);
 	}
 	/**

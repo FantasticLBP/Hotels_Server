@@ -100,7 +100,7 @@
                             <span class="red">酒店预定</span>
                             <span class="white">系统</span>
                         </h1>
-                        <h4 class="blue">&copy;<a href="">胡德权</a></h4>
+                        <h4 class="blue">&copy;<a href="https://weibo.com/3194053975/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1">杭城小刘</a></h4>
                     </div>
 
                     <div class="space-6"></div>
